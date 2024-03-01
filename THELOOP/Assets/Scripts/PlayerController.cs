@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingEvents))]
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5f;
+    public float jumpForce = 10f;
     Vector2 moveInput;
+    TouchingEvents touchingEvents;
 
     [SerializeField]
     private bool _isMoving = false;
@@ -47,6 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        touchingEvents = GetComponent<TouchingEvents>();
     }
 
     // Start is called before the first frame update
@@ -64,6 +67,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveInput.x * walkSpeed, rb.velocity.y);
+
+        animator.SetFloat(AnimationVariables.airVelocity, rb.velocity.y);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -84,6 +89,16 @@ public class PlayerController : MonoBehaviour
         else if (moveInput.x < 0 && IsFacingRight)
         {
             IsFacingRight = false;
+        }
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.started && touchingEvents.IsTouch)
+        {
+            animator.SetTrigger(AnimationVariables.jump);
+
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
 }
