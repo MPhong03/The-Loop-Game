@@ -4001,7 +4001,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 0}
       key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -4057,10 +4057,10 @@ MonoBehaviour:
   jumpForce: 10
   canDash: 1
   isDashing: 0
-  dashPower: 30
+  dashPower: 10
   dashTime: 0.2
   dashCooldown: 1
-  dashGravity: 0
+  dashGravity: 1
   _isMoving: 0
   _isFacingRight: 1
 --- !u!212 &8793548065041744728
