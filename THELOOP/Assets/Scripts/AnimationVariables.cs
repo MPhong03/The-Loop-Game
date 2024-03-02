@@ -4,4 +4,5 @@
     internal static string isTouchTile = "isTouchTile";
     internal static string airVelocity = "airVelocity";
     internal static string jump = "jump";
+    internal static string isDashing = "isDashing";
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,6 +8,25 @@ public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5f;
     public float jumpForce = 10f;
+
+    // Dash Field
+    [Header("Dash variables")]
+    [SerializeField]
+    public bool canDash = true;
+    [SerializeField]
+    public bool isDashing;
+    [SerializeField]
+    public float dashPower = 30f;
+    [SerializeField]
+    public float dashTime = 0.2f;
+    [SerializeField]
+    public float dashCooldown = 1.0f;
+    TrailRenderer trailRenderer;
+    [SerializeField]
+    public float dashGravity = 0f;
+    private float normalGravity;
+    private float waitTime;
+
     Vector2 moveInput;
     TouchingEvents touchingEvents;
 
@@ -45,27 +64,34 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingEvents = GetComponent<TouchingEvents>();
+        trailRenderer = GetComponent<TrailRenderer>();
+        normalGravity = rb.gravityScale;
+        canDash = true;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isDashing)
+        {
+            return;
+        }
     }
 
     private void FixedUpdate()
     {
+        if (isDashing)
+        {
+            return;
+        }
+
         rb.velocity = new Vector2(moveInput.x * walkSpeed, rb.velocity.y);
 
         animator.SetFloat(AnimationVariables.airVelocity, rb.velocity.y);
@@ -101,4 +127,34 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
+
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (context.performed && canDash)
+        {
+            Debug.Log("Dash conditions met, invoking Dash, Player: " + gameObject.activeInHierarchy + gameObject.activeSelf);
+            StartCoroutine(Dash());
+        }
+    }
+
+    private IEnumerator Dash()
+    {
+        Debug.Log("Dash!");
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0;
+        rb.velocity = new Vector2(transform.localScale.x * dashPower, 0);
+        animator.SetBool(AnimationVariables.isDashing, isDashing);
+        trailRenderer.emitting = true;
+        yield return new WaitForSeconds(dashTime);
+        trailRenderer.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        animator.SetBool(AnimationVariables.isDashing, isDashing);
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
+    }
+
+
 }
