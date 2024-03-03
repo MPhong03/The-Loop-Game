@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d0cc582998d3b8c4abdf4462a9d9f0b3
+guid: 25696aed06fd1324b81c214afe0e4fad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run-Spear_0
+      name: Roll_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 127
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b95a8dfa2e1ed1c40b4d63756219cb86
-      internalID: 2034975283
+      spriteID: bb8fcaa300bf71644add2e85d1cd24a0
+      internalID: -117048970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run-Spear_1
+      name: Roll_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 127
         y: 0
-        width: 128
+        width: 127
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,19 +158,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a465fb7ea45fa9540b707eb4dde6db5d
-      internalID: 661996197
+      spriteID: 3e332565564ab4b4bb471e2fbcf72a6b
+      internalID: 1889773830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run-Spear_2
+      name: Roll_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 254
         y: 0
-        width: 128
+        width: 127
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,19 +179,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d79daf47e821424e937bf6dd3432b9f
-      internalID: 2061893673
+      spriteID: 6f5a7e6714fb927438dfeaba77aad62d
+      internalID: -969389305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run-Spear_3
+      name: Roll_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 381
         y: 0
-        width: 128
+        width: 127
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,92 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2620887e07aedc443ae3efaa77861195
-      internalID: -1200774950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run-Spear_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0708dd7dfa7e3a4bb029a8472efb7cb
-      internalID: 466274041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run-Spear_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 968797b7d508f124a8e99217e81fb408
-      internalID: 2070468724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run-Spear_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef9c16443eef0fc43b7ab77bab919f02
-      internalID: -2053600912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run-Spear_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 874b039046832394ca5b68fb4f5c957f
-      internalID: 670908308
+      spriteID: 557c5eb14cbf03843baaffc60bc6221b
+      internalID: 924897034
       vertices: []
       indices: 
       edges: []
@@ -301,14 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Run-Spear_0: 2034975283
-      Run-Spear_1: 661996197
-      Run-Spear_2: 2061893673
-      Run-Spear_3: -1200774950
-      Run-Spear_4: 466274041
-      Run-Spear_5: 2070468724
-      Run-Spear_6: -2053600912
-      Run-Spear_7: 670908308
+      Roll_0: -117048970
+      Roll_1: 1889773830
+      Roll_2: -969389305
+      Roll_3: 924897034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public bool isDashing;
     [SerializeField]
-    public float dashPower = 30f;
+    public float dashPower = 15f;
     [SerializeField]
     public float dashTime = 0.2f;
     [SerializeField]
