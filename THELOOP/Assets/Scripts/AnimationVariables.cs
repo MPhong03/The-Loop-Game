@@ -5,4 +5,6 @@
     internal static string airVelocity = "airVelocity";
     internal static string jump = "jump";
     internal static string isDashing = "isDashing";
+    internal static string attack = "attack";
+    internal static string canMove = "canMove";
 }

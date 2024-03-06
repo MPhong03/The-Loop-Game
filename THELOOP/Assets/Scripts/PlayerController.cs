@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public bool isDashing;
     [SerializeField]
-    public float dashPower = 15f;
+    public float dashPower = 20f;
     [SerializeField]
     public float dashTime = 0.2f;
     [SerializeField]
@@ -32,6 +32,21 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private bool _isMoving = false;
+
+    public float MoveSpeed
+    {
+        get
+        {
+            if (CanMove)
+            {
+                return walkSpeed;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+    }
 
     public bool IsMoving {
         get
@@ -62,9 +77,16 @@ public class PlayerController : MonoBehaviour
         } 
     }
 
+    public bool CanMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationVariables.canMove);
+        }
+    }
+
     Rigidbody2D rb;
     Animator animator;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -92,7 +114,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        rb.velocity = new Vector2(moveInput.x * walkSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput.x * MoveSpeed, rb.velocity.y);
 
         animator.SetFloat(AnimationVariables.airVelocity, rb.velocity.y);
     }
@@ -104,6 +126,7 @@ public class PlayerController : MonoBehaviour
         IsMoving = moveInput != Vector2.zero;
 
         SetFacingDirection(moveInput);
+
     }
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -120,7 +143,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started && touchingEvents.IsTouch)
+        if (context.started && touchingEvents.IsTouch && CanMove)
         {
             animator.SetTrigger(AnimationVariables.jump);
 
@@ -156,5 +179,13 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
-
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Debug.Log("Attack!");
+            animator.SetTrigger(AnimationVariables.attack);
+            
+        }
+    }
 }
