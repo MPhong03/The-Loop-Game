@@ -6,5 +6,8 @@
     internal static string jump = "jump";
     internal static string isDashing = "isDashing";
     internal static string attack = "attack";
+    internal static string combo2 = "combo2";
+    internal static string combo3 = "combo3";
+    internal static string combo4 = "combo4";
     internal static string canMove = "canMove";
 }
