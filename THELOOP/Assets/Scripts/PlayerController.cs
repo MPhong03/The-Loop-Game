@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         get
         {
-            if (CanMove)
+            if (CanMove && !touchingEvents.IsWall)
             {
                 return walkSpeed;
             }

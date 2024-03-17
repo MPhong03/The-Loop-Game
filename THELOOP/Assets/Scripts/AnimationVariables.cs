@@ -10,4 +10,7 @@
     internal static string combo3 = "combo3";
     internal static string combo4 = "combo4";
     internal static string canMove = "canMove";
+    internal static string isTouchWall = "isTouchWall";
+    internal static string isTouchCeiling = "isTouchCeiling";
+    internal static string hasTarget = "hasTarget";
 }
