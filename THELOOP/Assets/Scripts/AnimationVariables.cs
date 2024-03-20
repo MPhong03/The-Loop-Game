@@ -13,4 +13,5 @@
     internal static string isTouchWall = "isTouchWall";
     internal static string isTouchCeiling = "isTouchCeiling";
     internal static string hasTarget = "hasTarget";
+    internal static string isAlive = "isAlive";
 }
