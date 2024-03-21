@@ -3582,6 +3582,111 @@ Transform:
   - {fileID: 1740540300}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1231361055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231361056}
+  - component: {fileID: 1231361058}
+  - component: {fileID: 1231361057}
+  m_Layer: 9
+  m_Name: AttackZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1231361056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231361055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1986305274909418796}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1231361057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231361055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26503a8f3e723124cb240213f8dde4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 25
+--- !u!60 &1231361058
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231361055}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.3970356, y: 0.8786837}
+      - {x: -0.76356894, y: 0.4303329}
+      - {x: 0.018909454, y: 0.44400954}
+      - {x: 0.542511, y: 0.22986555}
+      - {x: 0.9604435, y: -0.18136406}
+      - {x: 0.9646187, y: -1.0082111}
+      - {x: 0.40480286, y: -1.6361724}
+      - {x: -0.75748825, y: -1.8840835}
+      - {x: -0.08208084, y: -2.0614364}
+      - {x: 0.8951206, y: -2.057748}
+      - {x: 1.7766762, y: -1.6782646}
+      - {x: 2.1569118, y: -1.1840508}
+      - {x: 2.2531257, y: -0.27963734}
+      - {x: 1.6127806, y: 0.5847356}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1740540299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3989,7 +4094,8 @@ Transform:
   m_LocalPosition: {x: 16.72, y: -2.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1231361056}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3431041911896677547
@@ -4000,6 +4106,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5080624259231945572, guid: 9658df9f320698f4ab1f9f87d5b3b204, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080624259231945572, guid: 9658df9f320698f4ab1f9f87d5b3b204, type: 3}
+      propertyPath: _maxHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5326245623001451774, guid: 9658df9f320698f4ab1f9f87d5b3b204, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.54

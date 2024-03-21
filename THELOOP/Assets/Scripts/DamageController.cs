@@ -23,7 +23,7 @@ public class DamageController : MonoBehaviour
         { 
             _health = value;
 
-            if(_health < 0)
+            if(_health <= 0)
             {
                 IsAlive = false;
             }
@@ -51,6 +51,18 @@ public class DamageController : MonoBehaviour
         }
     }
 
+    public bool IsHit
+    {
+        get
+        {
+            return animator.GetBool(AnimationVariables.isHit);
+        }
+        private set
+        {
+            animator.SetBool(AnimationVariables.isHit, value);
+        }
+    }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -74,16 +86,19 @@ public class DamageController : MonoBehaviour
             }
             timeSinceHit += Time.deltaTime;
         }
-
-        Hit(10);
     }
 
-    public void Hit(int damage)
+    public bool Hit(int damage)
     {
         if (IsAlive && !isInvincible)
         {
             Health -= damage;
             isInvincible = true;
+
+            IsHit = true;
+
+            return true;
         }
+        return false;
     }
 }

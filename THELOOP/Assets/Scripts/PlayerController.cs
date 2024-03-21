@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingEvents))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingEvents), typeof(DamageController))]
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5f;
@@ -93,8 +93,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool IsHit
+    {
+        get
+        {
+            return animator.GetBool(AnimationVariables.isHit);
+        }
+        private set
+        {
+            animator.SetBool(AnimationVariables.isHit, value);
+        }
+    }
+
     Rigidbody2D rb;
     Animator animator;
+    DamageController damage;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -103,6 +116,7 @@ public class PlayerController : MonoBehaviour
         trailRenderer = GetComponent<TrailRenderer>();
         normalGravity = rb.gravityScale;
         canDash = true;
+        damage = GetComponent<DamageController>();
     }
 
 
@@ -205,4 +219,6 @@ public class PlayerController : MonoBehaviour
             
         }
     }
+
+
 }
