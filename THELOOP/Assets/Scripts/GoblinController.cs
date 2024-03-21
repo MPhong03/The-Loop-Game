@@ -6,6 +6,7 @@ using UnityEngine;
 public class GoblinScript : MonoBehaviour
 {
     public DetectionZone zone;
+    public DetectionZone groundZone;
 
     public float walkSpeed = 3f;
     public float walkStopRate = 0.05f;
@@ -58,6 +59,18 @@ public class GoblinScript : MonoBehaviour
         }
     }
 
+    public float AttackCoolDown 
+    { 
+        get
+        {
+            return animator.GetFloat(AnimationVariables.attackCoolDown);
+        } 
+        private set
+        {
+            animator.SetFloat(AnimationVariables.attackCoolDown, Mathf.Max(value, 0));
+        }
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -90,6 +103,11 @@ public class GoblinScript : MonoBehaviour
     void Update()
     {
         HasTarget = zone.detectedCols.Count > 0;
+        if (AttackCoolDown > 0)
+        {
+            AttackCoolDown -= Time.deltaTime;
+        }
+        
     }
 
     private void FlipDirection()
@@ -105,6 +123,14 @@ public class GoblinScript : MonoBehaviour
         else
         {
             Debug.Log("Undefined direction");
+        }
+    }
+
+    public void OnNoGround()
+    {
+        if (touchingEvents.IsTouch)
+        {
+            FlipDirection();
         }
     }
 }
