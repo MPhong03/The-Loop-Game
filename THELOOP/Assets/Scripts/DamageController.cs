@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DamageController : MonoBehaviour
 {
     Animator animator;
+
+    public UnityEvent<int, Vector2> damageHit;
 
     [SerializeField]
     private int _maxHealth = 100;
@@ -97,8 +100,21 @@ public class DamageController : MonoBehaviour
 
             IsHit = true;
 
+            CharacterEvents.tookDamaged.Invoke(gameObject, damage);
+
             return true;
         }
         return false;
+    }
+
+    public void Heal(int healamount)
+    {
+        if (IsAlive)
+        {
+            int maxheal = Mathf.Max(MaxHealth - Health, 0);
+            Health += Mathf.Min(maxheal, healamount);
+
+            CharacterEvents.healed(gameObject, healamount);
+        }
     }
 }
