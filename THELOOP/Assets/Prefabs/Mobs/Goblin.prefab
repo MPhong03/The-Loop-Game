@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26503a8f3e723124cb240213f8dde4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 30
 --- !u!1 &6228159848528887877
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7ed2dd75653fe4d848460ef344a678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageHit:
+    m_PersistentCalls:
+      m_Calls: []
   _maxHealth: 50
   _health: 50
   _isAlive: 1

@@ -49,8 +49,8 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.41666666
-        value: 1
+        time: 0.4166667
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -61,7 +61,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: AttackZone
+    path: AttackZone_2
     classID: 60
     script: {fileID: 0}
     flags: 0
@@ -91,7 +91,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2071577991
+      path: 736182574
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 60
@@ -167,8 +167,8 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.41666666
-        value: 1
+        time: 0.4166667
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -179,7 +179,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: AttackZone
+    path: AttackZone_2
     classID: 60
     script: {fileID: 0}
     flags: 0
