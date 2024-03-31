@@ -1,5 +1,6 @@
 ﻿internal class AnimationVariables
 {
+    // Player
     internal static string isMoving = "isMoving";
     internal static string isTouchTile = "isTouchTile";
     internal static string airVelocity = "airVelocity";
@@ -16,4 +17,6 @@
     internal static string isAlive = "isAlive";
     internal static string isHit = "isHit";
     internal static string attackCoolDown = "attackCoolDown";
+
+    // NPC
 }
