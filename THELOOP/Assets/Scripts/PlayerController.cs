@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingEvents), typeof(DamageController))]
 public class PlayerController : MonoBehaviour
 {
-    public float walkSpeed = 5f;
-    public float jumpForce = 10f;
+    public float walkSpeed = 20f;
+    public float jumpForce = 40f;
 
     // Dash Field
     [Header("Dash variables")]
