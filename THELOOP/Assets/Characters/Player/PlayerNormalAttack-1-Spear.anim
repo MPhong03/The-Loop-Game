@@ -16,81 +16,24 @@ AnimationClip:
   m_EulerCurves: []
   m_PositionCurves: []
   m_ScaleCurves: []
-  m_FloatCurves:
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.25
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.33333334
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5833333
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: SpearZone
-    classID: 60
-    script: {fileID: 0}
-    flags: 0
+  m_FloatCurves: []
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -372148944, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
+      value: {fileID: 1576036776, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
     - time: 0.083333336
-      value: {fileID: -490687029, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
+      value: {fileID: -2095105640, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
     - time: 0.16666667
-      value: {fileID: 1012546771, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
+      value: {fileID: -923923909, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
     - time: 0.25
-      value: {fileID: 1242298589, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
+      value: {fileID: -335581570, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
     - time: 0.33333334
-      value: {fileID: -2003983011, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
+      value: {fileID: 2068549030, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
     - time: 0.41666666
-      value: {fileID: 1684365761, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
+      value: {fileID: -741685841, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
     - time: 0.5
-      value: {fileID: 530515408, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
+      value: {fileID: -997142620, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -104,15 +47,6 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3106882746
-      attribute: 3305885265
-      script: {fileID: 0}
-      typeID: 60
-      customType: 0
-      isPPtrCurve: 0
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
-    - serializedVersion: 2
       path: 0
       attribute: 0
       script: {fileID: 0}
@@ -122,13 +56,13 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -372148944, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
-    - {fileID: -490687029, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
-    - {fileID: 1012546771, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
-    - {fileID: 1242298589, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
-    - {fileID: -2003983011, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
-    - {fileID: 1684365761, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
-    - {fileID: 530515408, guid: ae284e4a0750ca74f95b84f1ce83e3e8, type: 3}
+    - {fileID: 1576036776, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
+    - {fileID: -2095105640, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
+    - {fileID: -923923909, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
+    - {fileID: -335581570, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
+    - {fileID: 2068549030, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
+    - {fileID: -741685841, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
+    - {fileID: -997142620, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -149,64 +83,7 @@ AnimationClip:
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0
     m_Mirror: 0
-  m_EditorCurves:
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.25
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.33333334
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5833333
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: SpearZone
-    classID: 60
-    script: {fileID: 0}
-    flags: 0
+  m_EditorCurves: []
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
