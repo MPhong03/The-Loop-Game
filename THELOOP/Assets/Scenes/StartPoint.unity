@@ -1299,7 +1299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7555725167679372319, guid: a90e2f046f8a4fe43a0d3f87fcccf55e, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5018,6 +5018,10 @@ PrefabInstance:
     - target: {fileID: 4677899724673506445, guid: d2284ea76b0455546b320588d9b3261f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5835207053797509434, guid: d2284ea76b0455546b320588d9b3261f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8486058491882368429, guid: d2284ea76b0455546b320588d9b3261f, type: 3}
       propertyPath: m_Mesh

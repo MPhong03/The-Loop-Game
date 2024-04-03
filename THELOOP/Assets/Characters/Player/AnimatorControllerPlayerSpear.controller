@@ -53,32 +53,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-8489803495812331220
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerNormalAttack-1-Spear
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a58bee7c0f4b7884a971105c72fc2ce4, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1101 &-8275612607024479113
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -333,7 +307,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerRun
+  m_Name: PlayerRunSpear
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -351,7 +325,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9e20444220f5b8e4ea6e9f0edf2702e8, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4b89a8862bba3f24aba19a7208b9bab6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -450,32 +424,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 6d98ee93876831d4e8ff269fb3c44109, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &-3243451777037745572
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerNormalAttack-3-Spear
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d3df875dc4ca3f74db777d42b5dc3396, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -766,7 +714,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerNormalAttack-3-Sword
+  m_Name: PlayerNormalAttack-3-Spear
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -781,7 +729,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ad5af4c43cc32634196a512b917db4d9, type: 2}
+  m_Motion: {fileID: 7400000, guid: d3df875dc4ca3f74db777d42b5dc3396, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -846,7 +794,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AnimatorControllerPlayer
+  m_Name: AnimatorControllerPlayerSpear
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isMoving
@@ -951,32 +899,6 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 840bd66c6b6b1854db7b3983d410850a, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &314488523411354682
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerJumpUp-Spear
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: b5186ce6bf23f294cbad3399f7983ffe, type: 2}
   m_Tag: 
   m_SpeedParameter: 
@@ -990,7 +912,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerNormalAttack-2-Sword
+  m_Name: PlayerNormalAttack-2-Spear
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1005,59 +927,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0e0fe26dd00754d4b93c34f0e1a8e4fa, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &1760380300204539062
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerNormalAttack-2-Spear
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: bf10e4a02f87d794fbb14e1964d3fcf0, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &1903948974976970207
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerNormalAttack-4-Spear
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 080bb16cabc068e4780b571279e762f2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1088,32 +958,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &2252279845855331104
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerDroppingDown-Spear
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e9bfe131430b37a45a8a1b6595bcb748, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1101 &2422894330051397603
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1227,24 +1071,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -6257203566259247912}
     m_Position: {x: 540, y: 270, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -8489803495812331220}
-    m_Position: {x: 575, y: 335, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1760380300204539062}
-    m_Position: {x: 610, y: 400, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -3243451777037745572}
-    m_Position: {x: 645, y: 465, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1903948974976970207}
-    m_Position: {x: 680, y: 530, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 314488523411354682}
-    m_Position: {x: 715, y: 595, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 2252279845855331104}
-    m_Position: {x: 750, y: 660, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -304380587748795048}
@@ -1260,19 +1086,19 @@ AnimatorStateMachine:
   - {fileID: 5812177517694577667}
   m_EntryTransitions: []
   m_StateMachineTransitions:
+  - first: {fileID: -5513611436972994521}
+    second:
+    - {fileID: -2683384131426739328}
+    - {fileID: 4962983044147956306}
+  - first: {fileID: -2800341126227440501}
+    second:
+    - {fileID: -4466623619863722145}
+    - {fileID: -1650975836146098978}
   - first: {fileID: -304380587748795048}
     second:
     - {fileID: -2180269408008327729}
     - {fileID: -2872115122104062874}
     - {fileID: 6628584500027914547}
-  - first: {fileID: -2800341126227440501}
-    second:
-    - {fileID: -4466623619863722145}
-    - {fileID: -1650975836146098978}
-  - first: {fileID: -5513611436972994521}
-    second:
-    - {fileID: -2683384131426739328}
-    - {fileID: 4962983044147956306}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 560, y: 190, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
@@ -1470,7 +1296,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerNormalAttack-4-Sword
+  m_Name: PlayerNormalAttack-4-Spear
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1484,7 +1310,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b33ce5883dccf6c40bfd05edb8e28092, type: 2}
+  m_Motion: {fileID: 7400000, guid: 080bb16cabc068e4780b571279e762f2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1497,7 +1323,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerNormalAttack-1-Sword
+  m_Name: PlayerNormalAttack-1-Spear
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1512,7 +1338,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3a3c7152a5899244f85b43417e227ebb, type: 2}
+  m_Motion: {fileID: 7400000, guid: a58bee7c0f4b7884a971105c72fc2ce4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1605,7 +1431,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d1b35727611f87345b8e8d63327efc26, type: 2}
+  m_Motion: {fileID: 7400000, guid: e9bfe131430b37a45a8a1b6595bcb748, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1618,7 +1444,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerIdle
+  m_Name: PlayerIdleSpear
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1636,7 +1462,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 175357ed8e65e8d4dbb73af275ab7e58, type: 2}
+  m_Motion: {fileID: 7400000, guid: beec7f9e612fd0c45b6ca34cc84eb561, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1739,7 +1565,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 840bd66c6b6b1854db7b3983d410850a, type: 2}
+  m_Motion: {fileID: 7400000, guid: b5186ce6bf23f294cbad3399f7983ffe, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
