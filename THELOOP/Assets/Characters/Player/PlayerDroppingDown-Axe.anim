@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerNormalAttack-2-Spear
+  m_Name: PlayerDroppingDown-Axe
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1037752855, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
-    - time: 0.1
-      value: {fileID: 1938635989, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
-    - time: 0.2
-      value: {fileID: -1857672505, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
-    - time: 0.3
-      value: {fileID: -402903043, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
+      value: {fileID: -1896412039, guid: cb40d2abd3f302b4eb1d6f9294e455d7, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,16 +44,13 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1037752855, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
-    - {fileID: 1938635989, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
-    - {fileID: -1857672505, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
-    - {fileID: -402903043, guid: 8ef7210a9a178cf4d95e6955bc477adb, type: 3}
+    - {fileID: -1896412039, guid: cb40d2abd3f302b4eb1d6f9294e455d7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4
+    m_StopTime: 0.1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
