@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26503a8f3e723124cb240213f8dde4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 30
+  attackDamage: 20
 --- !u!1 &6228159848528887877
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1567575674616171362
 Transform:
   m_ObjectHideFlags: 0
@@ -566,4 +566,4 @@ MonoBehaviour:
   _health: 50
   _isAlive: 1
   isInvincible: 0
-  invincibleTime: 1
+  invincibleTime: 0.25

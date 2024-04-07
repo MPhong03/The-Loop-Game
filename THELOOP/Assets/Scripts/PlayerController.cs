@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     TrailRenderer trailRenderer;
     [SerializeField]
     public float dashGravity = 0f;
+    [SerializeField]
+    public float dashAttackTime = 0.75f;
+    [SerializeField]
+    private float dashAttackPower = 10f;
     private float normalGravity;
     private float waitTime;
 
@@ -108,6 +112,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     DamageController damage;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -210,13 +215,27 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
+    private IEnumerator DashAttack()
+    {
+        Debug.Log("DashAttack!");
+        canDash = false;
+        isDashing = true;
+
+        rb.velocity = new Vector2(transform.localScale.x * dashAttackPower, 0);
+        
+        yield return new WaitForSeconds(dashAttackTime);
+
+        isDashing = false;
+        canDash = true;
+    }
+
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             Debug.Log("Attack!");
             animator.SetTrigger(AnimationVariables.attack);
-            
+            StartCoroutine(DashAttack());
         }
     }
 

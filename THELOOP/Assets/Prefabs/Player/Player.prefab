@@ -1100,6 +1100,8 @@ MonoBehaviour:
   dashTime: 0.2
   dashCooldown: 1
   dashGravity: 1
+  dashAttackTime: 0.75
+  dashAttackPower: 10
   _isMoving: 0
   _isFacingRight: 1
 --- !u!114 &5880707697789212075
