@@ -11,6 +11,8 @@ public class PortalInteraction : MonoBehaviour
     private bool isPlayerNear = false;
     private bool canInteract = false;
     private List<int> randomList = new List<int>();
+    public int min;
+    public int max;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +47,7 @@ public class PortalInteraction : MonoBehaviour
     {
         if (isPlayerNear && Input.GetKeyDown(KeyCode.F) && canInteract)
         {
-            int number = Random.Range(1,6);
+            int number = Random.Range(min,max+1);
             Debug.Log(number);
             SceneManager.LoadScene(number);
         }
