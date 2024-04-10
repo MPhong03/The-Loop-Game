@@ -123,7 +123,11 @@ public class PlayerController : MonoBehaviour
         normalGravity = rb.gravityScale;
         canDash = true;
         damage = GetComponent<DamageController>();
-        animator.runtimeAnimatorController = GlobalManager.Instance.GlobalAnimatorController;
+
+        if (FindObjectOfType<GlobalManager>() != null)
+        {
+            animator.runtimeAnimatorController = GlobalManager.Instance.GlobalAnimatorController;
+        }
     }
 
 

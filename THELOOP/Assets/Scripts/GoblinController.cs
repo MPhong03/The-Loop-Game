@@ -1,3 +1,4 @@
+﻿using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,9 @@ public class GoblinScript : MonoBehaviour
     public enum WalkDirection { Right, Left };
     private WalkDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
+    private Transform player;
+    private Vector2 playerLastPosition;
+
     public WalkDirection walkDirection
     {
         get { return _walkDirection; }
@@ -76,22 +80,24 @@ public class GoblinScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         touchingEvents = GetComponent<TouchingEvents>();
         animator = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerLastPosition = player.position;
     }
     private void FixedUpdate()
     {
-        if (touchingEvents.IsWall && touchingEvents.IsTouch)
-        {
-            FlipDirection();
-        }
+        //if (touchingEvents.IsWall && touchingEvents.IsTouch)
+        //{
+        //    FlipDirection();
+        //}
 
-        if (CanMove)
-        {
-            rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y); ;
-        }   
+        //if (CanMove)
+        //{
+        //    rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+        //}
+        //else
+        //{
+        //    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y); ;
+        //}
     }
     // Start is called before the first frame update
     void Start()
@@ -102,6 +108,26 @@ public class GoblinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player != null)
+        {
+            // Tính toán hướng vector từ Goblin tới người chơi
+            Vector2 direction = new Vector2(player.position.x - transform.position.x, 0f).normalized;
+            // Di chuyển Goblin theo hướng này
+            rb.velocity = direction * walkSpeed;
+
+            // Flip hình ảnh nếu cần
+            if (direction.x > 0)
+            {
+                // Đang nhìn về bên phải
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else
+            {
+                // Đang nhìn về bên trái
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+        }
+
         HasTarget = zone.detectedCols.Count > 0;
         if (AttackCoolDown > 0)
         {
