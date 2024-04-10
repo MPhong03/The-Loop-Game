@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingEvents), typeof(DamageController))]
 public class PlayerController : MonoBehaviour
@@ -122,6 +123,7 @@ public class PlayerController : MonoBehaviour
         normalGravity = rb.gravityScale;
         canDash = true;
         damage = GetComponent<DamageController>();
+        animator.runtimeAnimatorController = GlobalManager.Instance.GlobalAnimatorController;
     }
 
 

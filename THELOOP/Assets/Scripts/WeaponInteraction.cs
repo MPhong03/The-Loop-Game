@@ -54,6 +54,8 @@ public class ObjectInteraction : MonoBehaviour
             if (playerAnimator.runtimeAnimatorController != objectAnimationController)
             {
                 playerAnimator.runtimeAnimatorController = objectAnimationController;
+
+                GlobalManager.Instance.GlobalAnimatorController = objectAnimationController;
             }
         }
     }
