@@ -1,15 +1,12 @@
-﻿using Pathfinding;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingEvents), typeof(DetectionZone))]
-public class GoblinScript : MonoBehaviour
+public class BOSSController : MonoBehaviour
 {
     public DetectionZone zone;
-    public DetectionZone groundZone;
 
-    public float walkSpeed = 3f;
+    public float walkSpeed = 4f;
     public float walkStopRate = 0.05f;
 
     Rigidbody2D rb;
@@ -25,29 +22,33 @@ public class GoblinScript : MonoBehaviour
     public WalkDirection walkDirection
     {
         get { return _walkDirection; }
-        set { 
-            if(_walkDirection != value)
+        set
+        {
+            if (_walkDirection != value)
             {
                 gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y);
-                if(value == WalkDirection.Right)
+                if (value == WalkDirection.Right)
                 {
                     walkDirectionVector = Vector2.right;
                 }
-                else if(value == WalkDirection.Left)
+                else if (value == WalkDirection.Left)
                 {
                     walkDirectionVector = Vector2.left;
                 }
             }
 
-            _walkDirection = value; }
+            _walkDirection = value;
+        }
     }
 
     public bool _hasTarget = false;
 
-    public bool HasTarget { get
+    public bool HasTarget
+    {
+        get
         {
             return _hasTarget;
-        } 
+        }
         private set
         {
             _hasTarget = value;
@@ -63,12 +64,12 @@ public class GoblinScript : MonoBehaviour
         }
     }
 
-    public float AttackCoolDown 
-    { 
+    public float AttackCoolDown
+    {
         get
         {
             return animator.GetFloat(AnimationVariables.attackCoolDown);
-        } 
+        }
         private set
         {
             animator.SetFloat(AnimationVariables.attackCoolDown, Mathf.Max(value, 0));
@@ -90,19 +91,21 @@ public class GoblinScript : MonoBehaviour
         //    FlipDirection();
         //}
 
-        //if (CanMove)
-        //{
-        //    rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
-        //}
-        //else
-        //{
-        //    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y); ;
-        //}
+        if (CanMove)
+        {
+            //rb.velocity = new Vector2((player.position.x - transform.position.x), rb.velocity.y) * walkSpeed;
+            Vector2 direction = new Vector2(player.position.x - transform.position.x, 0f).normalized;
+            rb.velocity = direction * walkSpeed;
+        }
+        else
+        {
+            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y);
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -112,8 +115,6 @@ public class GoblinScript : MonoBehaviour
         {
             // Tính toán hướng vector từ Goblin tới người chơi
             Vector2 direction = new Vector2(player.position.x - transform.position.x, 0f).normalized;
-            // Di chuyển Goblin theo hướng này
-            rb.velocity = direction * walkSpeed;
 
             // Flip hình ảnh nếu cần
             if (direction.x > 0)
@@ -133,12 +134,12 @@ public class GoblinScript : MonoBehaviour
         {
             AttackCoolDown -= Time.deltaTime;
         }
-        
+
     }
 
     private void FlipDirection()
     {
-        if(walkDirection == WalkDirection.Right)
+        if (walkDirection == WalkDirection.Right)
         {
             walkDirection = WalkDirection.Left;
         }
