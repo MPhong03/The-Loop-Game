@@ -110,10 +110,10 @@ public class GoblinScript : MonoBehaviour
     {
         if (player != null && CanMove)
         {
-            // Tính toán hướng vector từ Goblin tới người chơi
+            // Tính toán hướng vector từ Goblin tới người chơi trên trục x
             Vector2 direction = new Vector2(player.position.x - transform.position.x, 0f).normalized;
-            // Di chuyển Goblin theo hướng này
-            rb.velocity = direction * walkSpeed;
+            // Di chuyển Goblin theo hướng này, giữ nguyên thành phần vận tốc y để cho phép trọng lực tác động
+            rb.velocity = new Vector2(direction.x * walkSpeed, rb.velocity.y);
 
             // Flip hình ảnh nếu cần
             if (direction.x > 0)

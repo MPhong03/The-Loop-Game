@@ -241,9 +241,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Attack!");
             animator.SetTrigger(AnimationVariables.attack);
-            StartCoroutine(DashAttack());
         }
     }
 
-
+    public void OnDashAttack()
+    {
+        StartCoroutine(DashAttack());
+    }
 }

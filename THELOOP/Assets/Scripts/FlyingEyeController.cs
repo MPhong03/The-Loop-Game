@@ -51,6 +51,8 @@ public class FlyingEyeController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        AIDestinationSetter setter = GetComponent<AIDestinationSetter>();
+        setter.target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
