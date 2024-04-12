@@ -207,14 +207,14 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Dash!");
         canDash = false;
         isDashing = true;
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0;
+        //float originalGravity = rb.gravityScale;
+        //rb.gravityScale = 0;
         rb.velocity = new Vector2(transform.localScale.x * dashPower, 0);
         animator.SetBool(AnimationVariables.isDashing, isDashing);
         trailRenderer.emitting = true;
         yield return new WaitForSeconds(dashTime);
         trailRenderer.emitting = false;
-        rb.gravityScale = originalGravity;
+        //rb.gravityScale = originalGravity;
         isDashing = false;
         animator.SetBool(AnimationVariables.isDashing, isDashing);
         yield return new WaitForSeconds(dashCooldown);

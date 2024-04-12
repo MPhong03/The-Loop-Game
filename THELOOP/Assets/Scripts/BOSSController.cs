@@ -5,6 +5,8 @@ using UnityEngine;
 public class BOSSController : MonoBehaviour
 {
     public DetectionZone zone;
+    public GameObject tornadoPrefab;
+    public Transform firePoint;
 
     public float walkSpeed = 4f;
     public float walkStopRate = 0.05f;
@@ -135,6 +137,19 @@ public class BOSSController : MonoBehaviour
             AttackCoolDown -= Time.deltaTime;
         }
 
+    }
+
+    public void FireProjectile()
+    {
+        if (tornadoPrefab && firePoint)
+        {
+            GameObject tornado = Instantiate(tornadoPrefab, firePoint.position, Quaternion.identity);
+            Vector2 fireDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+
+            tornado.transform.localScale = new Vector3(transform.localScale.x, tornado.transform.localScale.y, tornado.transform.localScale.z);
+
+            tornado.GetComponent<FireballMovement>().Initialize(fireDirection);
+        }
     }
 
     private void FlipDirection()

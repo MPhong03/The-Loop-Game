@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3636701799038321474}
   m_Layer: 8
   m_Name: EvilWizard
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,6 +39,7 @@ Transform:
   - {fileID: 6525103397172311287}
   - {fileID: 1153816102511870934}
   - {fileID: 5537579638922236967}
+  - {fileID: 1023020713391745105}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6711594882315976431
@@ -230,7 +231,7 @@ MonoBehaviour:
   _health: 1000
   _isAlive: 1
   isInvincible: 0
-  invincibleTime: 1.5
+  invincibleTime: 1
 --- !u!114 &3636701799038321474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zone: {fileID: 5486120888473475422}
+  tornadoPrefab: {fileID: 3801775883046437149, guid: 7608eb64a362c4043801ce9d5a1b0966, type: 3}
+  firePoint: {fileID: 1023020713391745105}
   walkSpeed: 4
   walkStopRate: 0.05
   _hasTarget: 0
@@ -442,6 +445,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 15
+--- !u!1 &6830263224868749200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023020713391745105}
+  m_Layer: 8
+  m_Name: SkillPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023020713391745105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830263224868749200}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24, y: -0.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8559608818897404843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9188691086283076314
 GameObject:
   m_ObjectHideFlags: 0
