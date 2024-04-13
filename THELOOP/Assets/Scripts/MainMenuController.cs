@@ -12,6 +12,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OpenOptions()
     {
+        SceneManager.LoadScene("Settings");
     }
 
     public void QuitGame()
