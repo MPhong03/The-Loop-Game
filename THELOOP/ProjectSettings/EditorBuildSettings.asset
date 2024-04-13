@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/BossScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: f099bce17870cc84dad63c430336ce76
   - enabled: 1
     path: Assets/Scenes/StartPoint.unity
     guid: ed30a21900c2ffd47850eed74c1a9c46
@@ -26,4 +26,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest/Forest 5.unity
     guid: 6761094e0b0986e4a94591e6a2321e5e
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 6.unity
+    guid: f43c031b48de1d24c9fbb9705f408e68
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 7.unity
+    guid: f031191464a2b414995a0a2273b686d8
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 8.unity
+    guid: e40c137723d96fe45b5578af60a7d202
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 9.unity
+    guid: 4986695e1afa83b448b7b66aaf9ddf2e
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 10.unity
+    guid: 7c992dcf932d03d478f7ddf2abffe276
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 11.unity
+    guid: fdd298da081bc6c42a56ca5c266f3cf7
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 12.unity
+    guid: 1b0d9785ac406154f9c3088257541500
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 13.unity
+    guid: 8d94a80752c823c4f925b8eec5831728
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 14.unity
+    guid: 6c73e8ce08b40fc4db0554f323059c9c
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest 15.unity
+    guid: 9338503f6d748a643a6671010c75dfb1
+  - enabled: 1
+    path: Assets/Scenes/BossScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
