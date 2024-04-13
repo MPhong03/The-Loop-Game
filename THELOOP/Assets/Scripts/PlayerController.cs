@@ -114,6 +114,12 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     DamageController damage;
 
+    [Header("Special Skill One")]
+    public GameObject skillPrefab;
+    public float skillCooldown = 2f;
+    public bool skillStatusOne = false;
+    private bool canUseSkill1 = true;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -248,4 +254,25 @@ public class PlayerController : MonoBehaviour
     {
         StartCoroutine(DashAttack());
     }
+
+    public void OnSpecialSkill(InputAction.CallbackContext context)
+    {
+        if (context.performed && canUseSkill1 && skillStatusOne)
+        {
+            StartCoroutine(SpawnSkillPrefab());
+        }
+    }
+
+    private IEnumerator SpawnSkillPrefab()
+    {
+        canUseSkill1 = false;
+        Vector3 spawnDirection = _isFacingRight ? Vector2.right : Vector2.left;
+
+        GameObject spawnedSkill = Instantiate(skillPrefab, transform.position, Quaternion.identity);
+        spawnedSkill.GetComponent<FireballMovement>().Initialize(spawnDirection);
+
+        yield return new WaitForSeconds(skillCooldown);
+        canUseSkill1 = true;
+    }
+
 }

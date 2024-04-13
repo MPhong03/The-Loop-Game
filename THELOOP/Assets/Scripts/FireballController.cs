@@ -7,6 +7,8 @@ public class FireballController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private PolygonCollider2D coll;
+    [SerializeField]
+    public string targetTag = "Player";
 
     private void Awake()
     {
@@ -19,7 +21,7 @@ public class FireballController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(targetTag) || other.CompareTag("Boss"))
         {
             Explode();
         }

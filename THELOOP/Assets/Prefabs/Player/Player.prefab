@@ -1104,6 +1104,9 @@ MonoBehaviour:
   dashAttackPower: 10
   _isMoving: 0
   _isFacingRight: 1
+  skillPrefab: {fileID: 1147490348216428363, guid: 59a3fd649ab2c4b4dba4225a8b744caa, type: 3}
+  skillCooldown: 2
+  skillStatusOne: 0
 --- !u!114 &5880707697789212075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,6 +1240,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 44960199-b216-4ae5-ac87-11a0e5d5f386
     m_ActionName: Player/Dash[/Keyboard/l]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9189577414722258195}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnSpecialSkill
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fff51723-e178-4d9a-903a-4409feed8f51
+    m_ActionName: Player/Special Skill 1[/Keyboard/u]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
