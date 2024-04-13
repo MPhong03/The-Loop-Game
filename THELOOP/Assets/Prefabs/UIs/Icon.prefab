@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageCooldown: {fileID: 3295685375700994204}
-  dashCooldown: 1
+  dashCooldown: 1.2
 --- !u!1 &3482836836986406463
 GameObject:
   m_ObjectHideFlags: 0
