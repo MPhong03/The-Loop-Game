@@ -8,6 +8,7 @@ public class PortalInteraction : MonoBehaviour
 {
     public GameObject playerObject;
     public GameObject interactionUI;
+    public LoadingScreenController loadingScreenController;
     private bool isPlayerNear = false;
     private bool canInteract = false;
     private List<int> randomList = new List<int>();
@@ -19,6 +20,11 @@ public class PortalInteraction : MonoBehaviour
         if (playerObject == null)
         {
             Debug.LogError("There's no player gameobject");
+            return;
+        }
+        if (loadingScreenController == null)
+        {
+            Debug.LogError("Loading Screen Controller is not assigned!");
             return;
         }
     }
@@ -49,7 +55,7 @@ public class PortalInteraction : MonoBehaviour
         {
             int number = Random.Range(min,max+1);
             Debug.Log(number);
-            SceneManager.LoadScene(number);
+            loadingScreenController.LoadScene(number);
         }
     }
 }
