@@ -274,5 +274,23 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(skillCooldown);
         canUseSkill1 = true;
     }
-
+    public void ApplyBuff(Buff buff)
+    {
+        switch (buff.tag)
+        {
+            case 1:
+                skillStatusOne = true;
+                break;
+            // TODO: Thêm các case cho các buff khác
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                // Implement các tác động của buff tại đây
+                break;
+            default:
+                Debug.Log("Buff tag not recognized");
+                break;
+        }
+    }
 }

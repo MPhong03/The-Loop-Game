@@ -136,7 +136,6 @@ public class BOSSController : MonoBehaviour
         {
             AttackCoolDown -= Time.deltaTime;
         }
-
     }
 
     public void FireProjectile()

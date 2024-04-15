@@ -1485,6 +1485,7 @@ MonoBehaviour:
   _isAlive: 1
   isInvincible: 0
   invincibleTime: 1
+  InvicibleBuff: 0
 --- !u!1 &8075742969872984265
 GameObject:
   m_ObjectHideFlags: 0

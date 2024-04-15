@@ -1,0 +1,954 @@
+fileFormatVersion: 2
+guid: 8e9e21fc79f6bd447bdaaa136003ebef
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64da5f1eb0ae69948adfd634769fc8f1
+      internalID: 752905266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28cd72174325b847ac157c9adb225ee
+      internalID: 1994672276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a122691b251b54bb6b000097daca38
+      internalID: 622014593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53433375c9432240bb28fc365052a4c
+      internalID: 1122178557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8455c8e716e0d9f4db498c8f26a79953
+      internalID: 1780779786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87efb4defd1a976438778d59e6a27963
+      internalID: 861620566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de7858b6958a984b9206e66a149a423
+      internalID: 485548830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da66ba23b9bfc8418d286a3887568d5
+      internalID: 1647763245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecd04e1c12f5f34abd6f22ef6ecebe3
+      internalID: 1416889213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d920ab636078f1418b9bfd2138031a4
+      internalID: 1401116370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b5ca47c14cd56439378fda720887c8
+      internalID: -2135784051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_11
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a245567b242e8b40b2f185515af9d48
+      internalID: 163922929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_12
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb14ab93bf451694fa593b48f93586a4
+      internalID: -28627125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f933651ad7d81f4438b8edd8f941450a
+      internalID: -471462514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5815fa462ac326449bdc5fd081e2c367
+      internalID: 1834932926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41e8baa7189bb24580e3aae6dae468d
+      internalID: -676127857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be04e093568e9af4da060fc1d61481b7
+      internalID: -1735913842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_17
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836e895b092d1504195cd25e4f2e731f
+      internalID: 1906549393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_18
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a41d9ed8743f041beeefd3169feacf
+      internalID: 61480367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_19
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd99a97795e0528498a9db2bca93b5ad
+      internalID: 519692025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_20
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ee34909ce5ee04eb6e29e669b013b9
+      internalID: -485964499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c80c7925fabb2b4f84901322487d965
+      internalID: 1647948120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_22
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78508a9bd751a6e49946f8b4055808a8
+      internalID: 848490715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_23
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5417c3e62df6af840ad19b308425f975
+      internalID: 101977955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_24
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf543a6291a6c441b8a977ff6e432cf
+      internalID: 404016894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_25
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19293e6705dfe64990e74657bac7926
+      internalID: -2111436988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_26
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a1c5ca945bf8e4f95c290d22013cd1
+      internalID: 911784093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_27
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1e64108f48fa3409a5c8ac3bfa0194
+      internalID: 920263651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ed4d81106277445a817d0153a0d01d
+      internalID: 1524577766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_29
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105574bdde8b0104987707b17f7de605
+      internalID: -1643874270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_30
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981ecd70730d5a140b0dbfb8a7d230b9
+      internalID: 1684327576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_31
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4907022d4f4ee040a90ec17b06c9f51
+      internalID: -556171655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_32
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8949f28141e07284193556afe9b6e87d
+      internalID: -1242664361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_33
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5c42b055b1c794aa3271d8a2b7e1b7
+      internalID: 1850583954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_34
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2590ae38566231c4e92a907bd35160ec
+      internalID: 2110418884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ef6f51a9cb08247bdf6f72b6f3f1df
+      internalID: -1769826874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036c0251fdf4535469c4dc070529e184
+      internalID: -1014010975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_0: 752905266
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_1: 1994672276
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_10: -2135784051
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_11: 163922929
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_12: -28627125
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_13: -471462514
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_14: 1834932926
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_15: -676127857
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_16: -1735913842
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_17: 1906549393
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_18: 61480367
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_19: 519692025
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_2: 622014593
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_20: -485964499
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_21: 1647948120
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_22: 848490715
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_23: 101977955
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_24: 404016894
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_25: -2111436988
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_26: 911784093
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_27: 920263651
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_28: 1524577766
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_29: -1643874270
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_3: 1122178557
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_30: 1684327576
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_31: -556171655
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_32: -1242664361
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_33: 1850583954
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_34: 2110418884
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_35: -1769826874
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_36: -1014010975
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_4: 1780779786
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_5: 861620566
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_6: 485548830
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_7: 1647763245
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_8: 1416889213
+      PIXELART___pixelaesthetic_anime_pinkaesthetic_purpleaesthetic_pastelaesthetic_8bit_pixelartlandscape_illustration_lofi_lofipixel_wallpaper_backgrounds_cute_kawaii_pixelka-ezgif.com-gif-to-sprite-converter_9: 1401116370
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

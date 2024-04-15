@@ -8,11 +8,13 @@ public class SpawnController : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject spawnEffectPrefab;
 
-    [SerializeField]
-    private int spawnLimit = 10;
-    private int spawnCount = 0;
+    public int spawnLimit = 10;
+    public int spawnCount = 0;
 
     private LayerMask enemyLayer;
+
+    public delegate void SpawnCompleted();
+    public event SpawnCompleted OnSpawnCompleted;
 
     void Start()
     {
@@ -22,26 +24,18 @@ public class SpawnController : MonoBehaviour
 
     IEnumerator SpawnEnemies()
     {
-        Debug.Log("Coroutine started");
         while (spawnCount < spawnLimit)
         {
-            yield return new WaitUntil(() => AreAllEnemiesDefeated());
-
-            List<Coroutine> spawnCoroutines = new List<Coroutine>();
+            yield return new WaitUntil(AreAllEnemiesDefeated);
             foreach (Transform spawnPoint in spawnPoints)
             {
-                Coroutine spawnCoroutine = StartCoroutine(SpawnWithEffect(spawnPoint));
-                spawnCoroutines.Add(spawnCoroutine);
+                StartCoroutine(SpawnWithEffect(spawnPoint));
             }
-
-            foreach (Coroutine cor in spawnCoroutines)
-            {
-                yield return cor;
-            }
-
             spawnCount++;
             yield return new WaitForSeconds(1f);
         }
+        yield return new WaitUntil(AreAllEnemiesDefeated);
+        OnSpawnCompleted?.Invoke();
     }
 
     IEnumerator SpawnWithEffect(Transform spawnPoint)
