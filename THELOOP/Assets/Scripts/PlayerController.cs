@@ -114,16 +114,21 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     DamageController damage;
 
-    [Header("Special Skill One")]
+    [Header("Pyro Blade Skill")]
     public GameObject skillPrefab;
-    public float skillCooldown = 2f;
     public bool skillStatusOne = false;
     private bool canUseSkill1 = true;
 
-    [Header("Special Skill Two")]
+    [Header("Lightning Cloud Skill")]
     public GameObject lightningSkillPrefab;
     public bool skillStatusTwo = false;
 
+    [Header("Shield Skill")]
+    public GameObject shieldIcon;
+    public float shieldTime = 7f;
+    public bool skillStatusThree = false;
+
+    public float skillCooldown = 7f;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -285,6 +290,10 @@ public class PlayerController : MonoBehaviour
             {
                 StartCoroutine(SpawnLightningSkillPrefab());
             }
+            else if (skillStatusThree)
+            {
+                StartCoroutine(ShieldSkill());
+            }
         }
     }
 
@@ -314,6 +323,25 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(skillCooldown);
         canUseSkill1 = true;
     }
+
+    private IEnumerator ShieldSkill()
+    {
+        damage.InvicibleBuff = true;
+
+        shieldIcon.SetActive(true);
+
+        Debug.Log("Shield activated. Player is invincible!");
+
+        yield return new WaitForSeconds(shieldTime);
+
+        damage.InvicibleBuff = false;
+
+        shieldIcon.SetActive(false);
+
+        Debug.Log("Shield deactivated. Player is no longer invincible.");
+
+        yield return new WaitForSeconds(skillCooldown);
+    }
     private GameObject FindNearestEnemyWithTag(string tag)
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(tag);
@@ -337,19 +365,23 @@ public class PlayerController : MonoBehaviour
     {
         switch (buff.tag)
         {
+            // TODO: Thêm các case cho các buff khác
             case 1:
                 skillStatusOne = true;
                 skillStatusTwo = false;
+                skillStatusThree = false;
                 break;
-            // TODO: Thêm các case cho các buff khác
             case 2:
             case 3:
                 skillStatusTwo = true;
                 skillStatusOne = false;
+                skillStatusThree= false;
                 break;
             case 4:
             case 5:
-                // Implement các tác động của buff tại đây
+                skillStatusThree = true;
+                skillStatusOne = false;
+                skillStatusTwo = false;
                 break;
             default:
                 Debug.Log("Buff tag not recognized");

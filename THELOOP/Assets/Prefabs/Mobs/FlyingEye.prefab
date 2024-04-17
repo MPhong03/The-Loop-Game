@@ -249,7 +249,7 @@ MonoBehaviour:
   _health: 30
   _isAlive: 1
   isInvincible: 0
-  invincibleTime: 0.2
+  invincibleTime: 0.05
   InvicibleBuff: 0
 --- !u!50 &2294077438463518664
 Rigidbody2D:

@@ -360,7 +360,7 @@ MonoBehaviour:
   _health: 50
   _isAlive: 1
   isInvincible: 0
-  invincibleTime: 0.25
+  invincibleTime: 0.05
   InvicibleBuff: 0
 --- !u!1 &6850185037379843987
 GameObject:
