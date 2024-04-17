@@ -93,6 +93,7 @@ MonoBehaviour:
   buffItemPrefab: {fileID: 555984983079946350, guid: 3a0be6510cf960a4eb55b72375020253, type: 3}
   buffContainer: {fileID: 7004541458609297149}
   canvasGroup: {fileID: 6725097162919806341}
+  portal: {fileID: 0}
   fadeDuration: 0.5
 --- !u!114 &4436312770619713823
 MonoBehaviour:

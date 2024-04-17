@@ -120,6 +120,10 @@ public class PlayerController : MonoBehaviour
     public bool skillStatusOne = false;
     private bool canUseSkill1 = true;
 
+    [Header("Special Skill Two")]
+    public GameObject lightningSkillPrefab;
+    public bool skillStatusTwo = false;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -129,10 +133,22 @@ public class PlayerController : MonoBehaviour
         normalGravity = rb.gravityScale;
         canDash = true;
         damage = GetComponent<DamageController>();
+    }
 
+    private void Start()
+    {
         if (FindObjectOfType<GlobalManager>() != null)
         {
             animator.runtimeAnimatorController = GlobalManager.Instance.GlobalAnimatorController;
+            damage.Health = GlobalManager.Instance.health;
+            if (GlobalManager.Instance.buffs.Count > 0)
+            {
+                foreach (var buff in GlobalManager.Instance.buffs)
+                {
+                    ApplyBuff(buff);
+                }
+            }
+
         }
     }
 
@@ -213,6 +229,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Dash!");
         canDash = false;
         isDashing = true;
+        damage.isInvincible = true;
         //float originalGravity = rb.gravityScale;
         //rb.gravityScale = 0;
         rb.velocity = new Vector2(transform.localScale.x * dashPower, 0);
@@ -222,6 +239,7 @@ public class PlayerController : MonoBehaviour
         trailRenderer.emitting = false;
         //rb.gravityScale = originalGravity;
         isDashing = false;
+        damage.isInvincible = false;
         animator.SetBool(AnimationVariables.isDashing, isDashing);
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
@@ -257,9 +275,16 @@ public class PlayerController : MonoBehaviour
 
     public void OnSpecialSkill(InputAction.CallbackContext context)
     {
-        if (context.performed && canUseSkill1 && skillStatusOne)
+        if (context.performed && canUseSkill1)
         {
-            StartCoroutine(SpawnSkillPrefab());
+            if (skillStatusOne)
+            {
+                StartCoroutine(SpawnSkillPrefab());
+            }
+            else if (skillStatusTwo)
+            {
+                StartCoroutine(SpawnLightningSkillPrefab());
+            }
         }
     }
 
@@ -274,16 +299,54 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(skillCooldown);
         canUseSkill1 = true;
     }
+
+    private IEnumerator SpawnLightningSkillPrefab()
+    {
+        canUseSkill1 = false;
+        GameObject nearestEnemy = FindNearestEnemyWithTag("Enemies");
+
+        if (nearestEnemy != null)
+        {
+            GameObject lightning = Instantiate(lightningSkillPrefab, nearestEnemy.transform.position, Quaternion.identity);
+            
+        }
+
+        yield return new WaitForSeconds(skillCooldown);
+        canUseSkill1 = true;
+    }
+    private GameObject FindNearestEnemyWithTag(string tag)
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(tag);
+        GameObject nearest = null;
+        float minDistance = Mathf.Infinity;
+        Vector3 currentPosition = transform.position;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector3.Distance(enemy.transform.position, currentPosition);
+            if (distance < minDistance)
+            {
+                nearest = enemy;
+                minDistance = distance;
+            }
+        }
+
+        return nearest;
+    }
     public void ApplyBuff(Buff buff)
     {
         switch (buff.tag)
         {
             case 1:
                 skillStatusOne = true;
+                skillStatusTwo = false;
                 break;
             // TODO: Thêm các case cho các buff khác
             case 2:
             case 3:
+                skillStatusTwo = true;
+                skillStatusOne = false;
+                break;
             case 4:
             case 5:
                 // Implement các tác động của buff tại đây

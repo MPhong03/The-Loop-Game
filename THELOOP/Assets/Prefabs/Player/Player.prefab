@@ -1107,6 +1107,8 @@ MonoBehaviour:
   skillPrefab: {fileID: 1147490348216428363, guid: 59a3fd649ab2c4b4dba4225a8b744caa, type: 3}
   skillCooldown: 2
   skillStatusOne: 0
+  lightningSkillPrefab: {fileID: 2457519581881362982, guid: 699798e8701cfc74e8c7808476a4e9cf, type: 3}
+  skillStatusTwo: 0
 --- !u!114 &5880707697789212075
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -42,11 +42,20 @@ public class BuffManager : MonoBehaviour
     private List<Buff> PickRandomBuffs(int count)
     {
         List<Buff> pickedBuffs = new List<Buff>();
+        List<Buff> tempBuffs = new List<Buff>(availableBuffs); 
+
         for (int i = 0; i < count; i++)
         {
-            int randIndex = Random.Range(0, availableBuffs.Count);
-            pickedBuffs.Add(availableBuffs[randIndex]);
+            if (tempBuffs.Count == 0)
+            {
+                break;
+            }
+            int randIndex = Random.Range(0, tempBuffs.Count);
+            pickedBuffs.Add(tempBuffs[randIndex]);
+            tempBuffs.RemoveAt(randIndex);
         }
+
         return pickedBuffs;
     }
+
 }

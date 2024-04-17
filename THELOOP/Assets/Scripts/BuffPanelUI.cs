@@ -9,6 +9,7 @@ public class BuffPanelUI : MonoBehaviour
     public BuffItemUI buffItemPrefab;
     public Transform buffContainer;
     public CanvasGroup canvasGroup;
+    public GameObject portal;
     public float fadeDuration = 0.5f;
 
     void Start()

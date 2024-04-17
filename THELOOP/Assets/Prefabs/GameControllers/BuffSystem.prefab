@@ -46,19 +46,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableBuffs:
   - title: Pyro
-    description: When players choose this buff, receive a special pyro skill
+    description: When using special skill, player will launch a pyro blade forward
     tag: 1
   - title: Hydro
     description: anbatucam
     tag: 2
   - title: Electro
-    description: anbatucam
+    description: When using special skill, player will summoned a lightning cloud
+      at the closet enemy
     tag: 3
   - title: Cryo
     description: anbatucam
     tag: 4
   - title: Geo
-    description: anbatucam
+    description: When using special skill, player will be invicible for 5 seconds
     tag: 5
   - title: Anemo
     description: anbatucam

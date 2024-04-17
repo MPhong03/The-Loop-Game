@@ -32,6 +32,11 @@ public class DamageController : MonoBehaviour
             {
                 IsAlive = false;
             }
+
+            if (gameObject.CompareTag("Player"))
+            {
+                GlobalManager.Instance.UpdatePlayerHealth(_health);
+            }
         }
     }
 
@@ -79,7 +84,7 @@ public class DamageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

@@ -13,11 +13,13 @@ public class BuffItemUI : MonoBehaviour, IPointerClickHandler
     private PlayerController playerController;
 
     public BuffPanelUI buffPanel;
+    private GameObject buffActivator;
 
     private void Awake()
     {
         playerController = FindObjectOfType<PlayerController>();
         buffPanel = FindAnyObjectByType<BuffPanelUI>();
+        buffActivator = GameObject.FindGameObjectWithTag("BuffNPC");
     }
 
     public void Setup(Buff buff)
@@ -33,5 +35,18 @@ public class BuffItemUI : MonoBehaviour, IPointerClickHandler
         // Apply buff logic here
         playerController.ApplyBuff(currentBuff);
         StartCoroutine(buffPanel.FadeOut());
+
+        if (buffPanel.portal != null)
+            buffPanel.portal.SetActive(true);
+
+        if (buffActivator != null)
+            Destroy(buffActivator);
+
+        if (FindObjectOfType<GlobalManager>() != null)
+        {
+            GlobalManager.Instance.buffs.Add(currentBuff);
+        }
+
+        Destroy(buffPanel.gameObject);
     }
 }

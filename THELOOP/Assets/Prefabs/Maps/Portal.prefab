@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3901892668265929094}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,5 +185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
   interactionUI: {fileID: 0}
+  loadingScreenController: {fileID: 1390171047536537056, guid: 0a81737d8c465e548aea9dd3335683cd, type: 3}
   min: 1
   max: 5

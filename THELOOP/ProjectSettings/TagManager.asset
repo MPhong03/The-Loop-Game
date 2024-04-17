@@ -7,6 +7,8 @@ TagManager:
   - Boss
   - Boundary
   - Enemies
+  - Portal
+  - BuffNPC
   layers:
   - Default
   - TransparentFX
