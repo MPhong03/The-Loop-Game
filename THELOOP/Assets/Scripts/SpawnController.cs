@@ -16,6 +16,11 @@ public class SpawnController : MonoBehaviour
     public delegate void SpawnCompleted();
     public event SpawnCompleted OnSpawnCompleted;
 
+    AudioSource audioSource;
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     void Start()
     {
         enemyLayer = LayerMask.GetMask("Enemies");
@@ -43,6 +48,8 @@ public class SpawnController : MonoBehaviour
         GameObject effectInstance = Instantiate(spawnEffectPrefab, spawnPoint.position, Quaternion.identity);
         Animator effectAnimator = effectInstance.GetComponent<Animator>();
         AnimatorStateInfo stateInfo = effectAnimator.GetCurrentAnimatorStateInfo(0);
+
+        audioSource.Play();
 
         yield return new WaitForSeconds(stateInfo.length / 2); // Chờ hiệu ứng hoàn tất
 

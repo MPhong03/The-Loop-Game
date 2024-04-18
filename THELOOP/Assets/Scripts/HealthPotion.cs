@@ -5,17 +5,11 @@ using UnityEngine;
 public class HealthPotion : MonoBehaviour
 {
     public int healamount = 15;
-    // Start is called before the first frame update
-    //void Start()
-    //{
-        
-    //}
-
-    // Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
+    private AudioSource audioSource;
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,7 +19,12 @@ public class HealthPotion : MonoBehaviour
         {
             damageController.Heal(healamount);
 
-            Destroy(gameObject);
+            audioSource.Play();
+
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<Renderer>().enabled = false;
+
+            Destroy(gameObject, audioSource.clip.length);
         }
     }
 }

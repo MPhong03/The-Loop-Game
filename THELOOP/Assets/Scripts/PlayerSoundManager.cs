@@ -12,6 +12,9 @@ public class PlayerSoundManager : MonoBehaviour
     public AudioSource jump;
     public AudioSource land;
     public AudioSource dash;
+    public AudioSource ouch;
+    public AudioSource takedown;
+
     [Header("Skill Sound")]
     public AudioSource fire;
     public AudioSource heal;
@@ -70,6 +73,14 @@ public class PlayerSoundManager : MonoBehaviour
     public void PlayShieldSound()
     {
         shield.Play();
+    }
+    public void PlayOuchSound()
+    {
+        ouch.Play();
+    }
+    public void PlayTakeDown()
+    {
+        takedown.Play();
     }
 
     public void StopWalkSound()

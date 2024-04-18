@@ -11,6 +11,12 @@ public class GlobalManager : MonoBehaviour
     public int sceneTransitionCount = -1; // Not include Start Point
     public bool isFinishNormal = false;
 
+    public RuntimeAnimatorController sword;
+    public RuntimeAnimatorController spear;
+    public RuntimeAnimatorController axe;
+
+    public int currentWeaponFlag = 1;
+
     private void Awake()
     {
         if (Instance == null)
@@ -25,6 +31,16 @@ public class GlobalManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        LoadPlayerState();
+    }
+
+    private void OnApplicationQuit()
+    {
+        SavePlayerState();
+    }
+
     public void UpdatePlayerHealth(int currentHealth)
     {
         health = currentHealth;
@@ -36,6 +52,7 @@ public class GlobalManager : MonoBehaviour
         PlayerPrefs.SetString("Buffs", JsonUtility.ToJson(new BuffList { Buffs = buffs }));
         PlayerPrefs.SetInt("SceneTransitions", sceneTransitionCount);
         PlayerPrefs.SetInt("FinishNormal", isFinishNormal ? 1 : 0);
+        PlayerPrefs.SetInt("CurrentWeaponFlag", currentWeaponFlag);
         PlayerPrefs.Save();
 
     }
@@ -51,6 +68,34 @@ public class GlobalManager : MonoBehaviour
         }
         sceneTransitionCount = PlayerPrefs.GetInt("SceneTransitions", 0);
         isFinishNormal = PlayerPrefs.GetInt("FinishNormal", 0) != 0;
+
+        int weaponFlag = PlayerPrefs.GetInt("CurrentWeaponFlag", 1); // Sword is default
+        ApplyWeaponController(weaponFlag);
+    }
+
+    private void ApplyWeaponController(int flag)
+    {
+        switch (flag)
+        {
+            case 1:
+                GlobalAnimatorController = sword;
+                break;
+            case 2:
+                GlobalAnimatorController = spear;
+                break;
+            case 3:
+                GlobalAnimatorController = axe;
+                break;
+            default:
+                GlobalAnimatorController = sword;
+                break;
+        }
+    }
+
+    public void ChangeWeapon(int weaponType)
+    {
+        currentWeaponFlag = weaponType;
+        ApplyWeaponController(currentWeaponFlag);
     }
 
     [System.Serializable]

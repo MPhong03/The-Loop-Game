@@ -6,7 +6,8 @@ public class ObjectInteraction : MonoBehaviour
     public GameObject interactionUI;
     private bool isPlayerNear = false;
 
-    public RuntimeAnimatorController objectAnimationController; 
+    public RuntimeAnimatorController objectAnimationController;
+    public int flag;
     private bool canInteract = false;
 
     void Start()
@@ -56,6 +57,7 @@ public class ObjectInteraction : MonoBehaviour
                 playerAnimator.runtimeAnimatorController = objectAnimationController;
 
                 GlobalManager.Instance.GlobalAnimatorController = objectAnimationController;
+                GlobalManager.Instance.ChangeWeapon(flag);
             }
         }
     }

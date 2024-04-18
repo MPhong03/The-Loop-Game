@@ -7,10 +7,11 @@ public class SkillBarController : MonoBehaviour
 {
     public Image imageCooldown;
     public float dashCooldown;
+    public KeyCode key;
     bool isDashCooldown;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(key))
         {
             isDashCooldown = true;
         }

@@ -86,7 +86,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.199
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 3992438926045041567}
-  player: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!1 &4477952403309440363
 GameObject:
   m_ObjectHideFlags: 0
