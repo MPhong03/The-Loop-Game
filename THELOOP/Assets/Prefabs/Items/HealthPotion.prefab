@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cbc3de1325a1146a64a9d3c4e0223e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healamount: 15
+  healamount: 30
 --- !u!58 &6195505485380482782
 CircleCollider2D:
   m_ObjectHideFlags: 0

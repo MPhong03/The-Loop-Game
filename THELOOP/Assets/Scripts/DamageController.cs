@@ -33,7 +33,7 @@ public class DamageController : MonoBehaviour
                 IsAlive = false;
             }
 
-            if (gameObject.CompareTag("Player"))
+            if (gameObject.CompareTag("Player") && GlobalManager.Instance != null)
             {
                 GlobalManager.Instance.UpdatePlayerHealth(_health);
             }

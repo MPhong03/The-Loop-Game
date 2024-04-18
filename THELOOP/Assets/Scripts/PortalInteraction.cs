@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Cinemachine.DocumentationSortingAttribute;
@@ -14,6 +15,11 @@ public class PortalInteraction : MonoBehaviour
     private List<int> randomList = new List<int>();
     public int min;
     public int max;
+
+    [Header("Boss scene transition's condition")]
+    public int bossSceneCondition = 4;
+    private int restSceneID = 18;
+    private int bossSceneID = 17;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,9 +59,24 @@ public class PortalInteraction : MonoBehaviour
     {
         if (isPlayerNear && Input.GetKeyDown(KeyCode.F) && canInteract)
         {
-            int number = Random.Range(min,max+1);
-            Debug.Log(number);
-            loadingScreenController.LoadScene(number);
+            GlobalManager.Instance.sceneTransitionCount++;
+
+            if (GlobalManager.Instance.sceneTransitionCount >= bossSceneCondition && GlobalManager.Instance.isFinishNormal == false)
+            {
+                GlobalManager.Instance.isFinishNormal = true;
+                Debug.Log("Loading special scene: " + restSceneID);
+                loadingScreenController.LoadScene(restSceneID);
+            }
+            else if (GlobalManager.Instance.isFinishNormal)
+            {
+                loadingScreenController.LoadScene(bossSceneID);
+            }
+            else
+            {
+                int number = Random.Range(min, max + 1);
+                Debug.Log("Loading normal scene: " + number);
+                loadingScreenController.LoadScene(number);
+            }
         }
     }
 }

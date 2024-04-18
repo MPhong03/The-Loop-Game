@@ -858,6 +858,8 @@ MonoBehaviour:
   GlobalAnimatorController: {fileID: 9100000, guid: a38b5e8bb9bfd06438f2a444d9156303, type: 2}
   health: 100
   buffs: []
+  sceneTransitionCount: -1
+  isFinishNormal: 0
 --- !u!4 &1413613630
 Transform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class GlobalManager : MonoBehaviour
     public RuntimeAnimatorController GlobalAnimatorController;
     public int health = 100;
     public List<Buff> buffs = new List<Buff>();
+    public int sceneTransitionCount = -1; // Not include Start Point
+    public bool isFinishNormal = false;
 
     private void Awake()
     {
@@ -32,6 +34,8 @@ public class GlobalManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.SetString("Buffs", JsonUtility.ToJson(new BuffList { Buffs = buffs }));
+        PlayerPrefs.SetInt("SceneTransitions", sceneTransitionCount);
+        PlayerPrefs.SetInt("FinishNormal", isFinishNormal ? 1 : 0);
         PlayerPrefs.Save();
 
     }
@@ -45,6 +49,8 @@ public class GlobalManager : MonoBehaviour
         {
             buffs = loadedBuffs.Buffs;
         }
+        sceneTransitionCount = PlayerPrefs.GetInt("SceneTransitions", 0);
+        isFinishNormal = PlayerPrefs.GetInt("FinishNormal", 0) != 0;
     }
 
     [System.Serializable]

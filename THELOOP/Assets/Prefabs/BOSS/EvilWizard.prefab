@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3636701799038321474}
   m_Layer: 8
   m_Name: EvilWizard
-  m_TagString: Boss
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

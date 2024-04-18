@@ -188,3 +188,4 @@ MonoBehaviour:
   loadingScreenController: {fileID: 1390171047536537056, guid: 0a81737d8c465e548aea9dd3335683cd, type: 3}
   min: 1
   max: 5
+  bossSceneCondition: 3
