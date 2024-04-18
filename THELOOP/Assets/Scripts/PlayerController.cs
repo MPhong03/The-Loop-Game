@@ -113,11 +113,11 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     DamageController damage;
+    PlayerSoundManager soundManager;
 
     [Header("Pyro Blade Skill")]
     public GameObject skillPrefab;
     public bool skillStatusOne = false;
-    private bool canUseSkill1 = true;
 
     [Header("Lightning Cloud Skill")]
     public GameObject lightningSkillPrefab;
@@ -128,7 +128,20 @@ public class PlayerController : MonoBehaviour
     public float shieldTime = 7f;
     public bool skillStatusThree = false;
 
+    [Header("Heal Skill")]
+    public bool skillStatusFour = false;
+
+    [Header("Anemo Blade Skill")]
+    public GameObject anemoPrefab;
+    public bool skillStatusFive = false;
+
+    [Header("Freeze Skill")]
+    public GameObject freezeEffectPrefab;
+    public float freezeTime = 5f;
+    public bool skillStatusSix = false;
+
     public float skillCooldown = 7f;
+    private bool canUseSkill1 = true;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -138,6 +151,7 @@ public class PlayerController : MonoBehaviour
         normalGravity = rb.gravityScale;
         canDash = true;
         damage = GetComponent<DamageController>();
+        soundManager = GetComponent<PlayerSoundManager>();
     }
 
     private void Start()
@@ -165,6 +179,12 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+
+        if (!IsMoving || !touchingEvents.IsTouch)
+        {
+            soundManager.StopWalkSound();
+        }
+
     }
 
     private void FixedUpdate()
@@ -186,7 +206,7 @@ public class PlayerController : MonoBehaviour
         if (IsAlive)
         {
             IsMoving = moveInput != Vector2.zero;
-
+            soundManager.PlayWalkSound();
             SetFacingDirection(moveInput);
         }
         else
@@ -215,7 +235,7 @@ public class PlayerController : MonoBehaviour
         if (context.started && touchingEvents.IsTouch && CanMove)
         {
             animator.SetTrigger(AnimationVariables.jump);
-
+            soundManager.PlayJumpSound();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
@@ -225,6 +245,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed && canDash)
         {
             Debug.Log("Dash conditions met, invoking Dash, Player: " + gameObject.activeInHierarchy + gameObject.activeSelf);
+            soundManager.PlayDashSound();
             StartCoroutine(Dash());
         }
     }
@@ -284,7 +305,7 @@ public class PlayerController : MonoBehaviour
         {
             if (skillStatusOne)
             {
-                StartCoroutine(SpawnSkillPrefab());
+                StartCoroutine(SpawnFireBladePrefab());
             }
             else if (skillStatusTwo)
             {
@@ -294,10 +315,23 @@ public class PlayerController : MonoBehaviour
             {
                 StartCoroutine(ShieldSkill());
             }
+            else if (skillStatusFour)
+            {
+                StartCoroutine(HealSkill());
+            }
+            else if (skillStatusFive)
+            {
+                StartCoroutine(SpawnAnemoBladePrefab());
+            }
+            else if (skillStatusSix)
+            {
+                StartCoroutine(FreezeEnemies());
+            }
         }
     }
 
-    private IEnumerator SpawnSkillPrefab()
+    // FIRE BLADE SKILL
+    private IEnumerator SpawnFireBladePrefab()
     {
         canUseSkill1 = false;
         Vector3 spawnDirection = _isFacingRight ? Vector2.right : Vector2.left;
@@ -305,10 +339,13 @@ public class PlayerController : MonoBehaviour
         GameObject spawnedSkill = Instantiate(skillPrefab, transform.position, Quaternion.identity);
         spawnedSkill.GetComponent<FireballMovement>().Initialize(spawnDirection);
 
+        soundManager.PlayFireSound();
+
         yield return new WaitForSeconds(skillCooldown);
         canUseSkill1 = true;
     }
 
+    // LIGHTNING SKILL
     private IEnumerator SpawnLightningSkillPrefab()
     {
         canUseSkill1 = false;
@@ -317,18 +354,23 @@ public class PlayerController : MonoBehaviour
         if (nearestEnemy != null)
         {
             GameObject lightning = Instantiate(lightningSkillPrefab, nearestEnemy.transform.position, Quaternion.identity);
-            
+            soundManager.PlayLightningSound();
         }
 
         yield return new WaitForSeconds(skillCooldown);
         canUseSkill1 = true;
     }
 
+    // SHIELD SKILL
     private IEnumerator ShieldSkill()
     {
+        canUseSkill1 = false;
+
         damage.InvicibleBuff = true;
 
         shieldIcon.SetActive(true);
+
+        soundManager.PlayShieldSound();
 
         Debug.Log("Shield activated. Player is invincible!");
 
@@ -341,7 +383,90 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Shield deactivated. Player is no longer invincible.");
 
         yield return new WaitForSeconds(skillCooldown);
+
+        canUseSkill1 = true;
     }
+
+    // HEAL SKILL
+    private IEnumerator HealSkill()
+    {
+        canUseSkill1 = false;
+        soundManager.PlayHealSound();
+        damage.Heal(50);
+        yield return new WaitForSeconds(skillCooldown);
+
+        canUseSkill1 = true;
+    }
+
+    // ANEMO SKILL
+    private IEnumerator SpawnAnemoBladePrefab()
+    {
+        canUseSkill1 = false;
+        Vector3 spawnDirection = _isFacingRight ? Vector2.right : Vector2.left;
+
+        GameObject spawnedSkill = Instantiate(anemoPrefab, transform.position, Quaternion.identity);
+        spawnedSkill.GetComponent<FireballMovement>().Initialize(spawnDirection);
+
+        soundManager.PlayWindSound();
+
+        yield return new WaitForSeconds(skillCooldown);
+        canUseSkill1 = true;
+    }
+
+    // FREEZE SKILL
+    private IEnumerator FreezeEnemies()
+    {
+        canUseSkill1 = false;
+
+        // Find all tag "Enemies"
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemies");
+
+        // Freeze all Enemies
+        foreach (GameObject enemy in enemies)
+        {
+            Animator enemyAnimator = enemy.GetComponent<Animator>();
+            Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>();
+            if (enemyAnimator != null)
+            {
+                enemyAnimator.enabled = false;
+            }
+            if (enemyRb != null)
+            {
+                enemyRb.constraints = RigidbodyConstraints2D.FreezeAll;
+                GameObject effect = Instantiate(freezeEffectPrefab, enemy.transform.position, Quaternion.identity);
+                Animator effectAnimator = effect.GetComponent<Animator>();
+                AnimatorStateInfo stateInfo = effectAnimator.GetCurrentAnimatorStateInfo(0);
+                float effectDuration = stateInfo.length;
+
+                Destroy(effect, effectDuration);
+            }
+        }
+
+        soundManager.PlayFreezeSound();
+
+        // Freeze time
+        yield return new WaitForSeconds(freezeTime);
+
+        // Unfreeze
+        foreach (GameObject enemy in enemies)
+        {
+            Animator enemyAnimator = enemy.GetComponent<Animator>();
+            Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>();
+
+            if (enemyAnimator != null)
+            {
+                enemyAnimator.enabled = true;
+            }
+            if (enemyRb != null)
+            {
+                enemyRb.constraints = RigidbodyConstraints2D.None;
+                enemyRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            }
+        }
+
+        canUseSkill1 = true;
+    }
+
     private GameObject FindNearestEnemyWithTag(string tag)
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(tag);
@@ -367,25 +492,36 @@ public class PlayerController : MonoBehaviour
         {
             // TODO: Thêm các case cho các buff khác
             case 1:
-                skillStatusOne = true;
-                skillStatusTwo = false;
-                skillStatusThree = false;
+                UpdateSkillStatus(true, false, false, false, false, false);
                 break;
             case 2:
+                UpdateSkillStatus(false, false, false, true, false, false);
+                break;
             case 3:
-                skillStatusTwo = true;
-                skillStatusOne = false;
-                skillStatusThree= false;
+                UpdateSkillStatus(false, true, false, false, false, false);
                 break;
             case 4:
+                UpdateSkillStatus(false, false, false, false, false, true);
+                break;
             case 5:
-                skillStatusThree = true;
-                skillStatusOne = false;
-                skillStatusTwo = false;
+                UpdateSkillStatus(false, false, true, false, false, false);
+                break;
+            case 6:
+                UpdateSkillStatus(false, false, false, false, true, false);
                 break;
             default:
                 Debug.Log("Buff tag not recognized");
                 break;
         }
+    }
+
+    private void UpdateSkillStatus(bool one, bool two, bool three, bool four, bool five, bool six)
+    {
+        skillStatusOne = one;
+        skillStatusTwo = two;
+        skillStatusThree = three;
+        skillStatusFour = four;
+        skillStatusFive = five;
+        skillStatusSix = six;
     }
 }

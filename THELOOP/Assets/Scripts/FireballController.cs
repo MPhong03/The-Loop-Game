@@ -21,7 +21,7 @@ public class FireballController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(targetTag) || other.CompareTag("Boss"))
+        if (other.CompareTag(targetTag))
         {
             Explode();
         }

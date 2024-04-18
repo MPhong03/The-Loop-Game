@@ -6293,6 +6293,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5645834813a1a4540bc8e571410e6219, type: 3}
+--- !u!1 &172253567836209165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3592402339279555157, guid: 5645834813a1a4540bc8e571410e6219, type: 3}
+  m_PrefabInstance: {fileID: 172253567836209164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1986305274909418796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6765820016618052707, guid: a90e2f046f8a4fe43a0d3f87fcccf55e, type: 3}
@@ -6419,10 +6424,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BOSSHealthBar
       objectReference: {fileID: 0}
-    - target: {fileID: 3992438926045041567, guid: d6aad44ae0d7f404089121c9980dc746, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4286827943128997399, guid: d6aad44ae0d7f404089121c9980dc746, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6517,7 +6518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7576209466604976830, guid: d6aad44ae0d7f404089121c9980dc746, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -73.858
+      value: -78
       objectReference: {fileID: 0}
     - target: {fileID: 7576209466604976830, guid: d6aad44ae0d7f404089121c9980dc746, type: 3}
       propertyPath: m_SizeDelta.y
@@ -6525,12 +6526,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7576209466604976830, guid: d6aad44ae0d7f404089121c9980dc746, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.19281006
+      value: -0.102996826
       objectReference: {fileID: 0}
     - target: {fileID: 7576209466604976830, guid: d6aad44ae0d7f404089121c9980dc746, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -6.168701
       objectReference: {fileID: 0}
+    - target: {fileID: 8458846667706855572, guid: d6aad44ae0d7f404089121c9980dc746, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 172253567836209165}
+    - target: {fileID: 8458846667706855572, guid: d6aad44ae0d7f404089121c9980dc746, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 172253567836209165}
+    - target: {fileID: 8458846667706855572, guid: d6aad44ae0d7f404089121c9980dc746, type: 3}
+      propertyPath: bossObject
+      value: 
+      objectReference: {fileID: 172253567836209165}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

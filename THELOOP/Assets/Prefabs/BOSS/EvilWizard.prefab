@@ -231,7 +231,7 @@ MonoBehaviour:
   _health: 1000
   _isAlive: 1
   isInvincible: 0
-  invincibleTime: 0.5
+  invincibleTime: 0.05
   InvicibleBuff: 0
 --- !u!114 &3636701799038321474
 MonoBehaviour:

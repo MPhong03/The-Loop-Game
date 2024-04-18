@@ -917,18 +917,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: c291fb6640ad869418f29b63f5acecc4, type: 2}
     - target: {fileID: 6765820016618052707, guid: a90e2f046f8a4fe43a0d3f87fcccf55e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5775001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6765820016618052707, guid: a90e2f046f8a4fe43a0d3f87fcccf55e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5775001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6765820016618052707, guid: a90e2f046f8a4fe43a0d3f87fcccf55e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5775001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6765820016618052707, guid: a90e2f046f8a4fe43a0d3f87fcccf55e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.6
       objectReference: {fileID: 0}
@@ -975,6 +963,10 @@ PrefabInstance:
     - target: {fileID: 7362223104029761425, guid: a90e2f046f8a4fe43a0d3f87fcccf55e, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408080721370824557, guid: a90e2f046f8a4fe43a0d3f87fcccf55e, type: 3}
+      propertyPath: m_Name
+      value: PlayerSoundManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7969,11 +7961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.599991
+      value: -2.5999877
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.26579
+      value: 3.26578
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8341,10 +8333,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 893831866}
     m_Modifications:
-    - target: {fileID: 1630053998016393973, guid: 1dd12b8c958a8bf48b937c462f1e6c65, type: 3}
-      propertyPath: spawnLimit
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1630053998016393973, guid: 1dd12b8c958a8bf48b937c462f1e6c65, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 

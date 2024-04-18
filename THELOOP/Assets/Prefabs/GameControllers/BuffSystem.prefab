@@ -49,20 +49,22 @@ MonoBehaviour:
     description: When using special skill, player will launch a pyro blade forward
     tag: 1
   - title: Hydro
-    description: anbatucam
+    description: When using special skill, player's health restored by 50 points
     tag: 2
   - title: Electro
     description: When using special skill, player will summoned a lightning cloud
       at the closet enemy
     tag: 3
   - title: Cryo
-    description: anbatucam
+    description: When using special skill, all enemies in current stage will be freezed
+      for 5 seconds
     tag: 4
   - title: Geo
-    description: When using special skill, player will be invicible for 5 seconds
+    description: When using special skill, player will be invincible for 5 seconds
     tag: 5
   - title: Anemo
-    description: anbatucam
+    description: When using special skill, player player will launch an anemo blade
+      forward
     tag: 6
   buffPanelUI: {fileID: 0}
   buffActivatorPrefab: {fileID: 1402704209960761475, guid: c071d1cbb46ea2f4d93ebd7e3f9951ca, type: 3}

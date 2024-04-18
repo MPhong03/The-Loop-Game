@@ -6,18 +6,17 @@ using UnityEngine.UI;
 public class BossHealthBar : MonoBehaviour
 {
     public Slider slider;
+    public GameObject boss;
 
     DamageController damageController;
     private void Awake()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Boss");
-
-        if (player == null)
+        if (boss == null)
         {
             Debug.Log("No Boss!");
         }
 
-        damageController = player.GetComponent<DamageController>();
+        damageController = boss.GetComponent<DamageController>();
     }
     // Start is called before the first frame update
     void Start()
