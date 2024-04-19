@@ -1,16 +1,21 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalManager : MonoBehaviour
 {
     public static GlobalManager Instance { get; set; }
+
+    [Header("Saved Variable")]
     public RuntimeAnimatorController GlobalAnimatorController;
     public int health = 100;
     public List<Buff> buffs = new List<Buff>();
     public int sceneTransitionCount = -1; // Not include Start Point
     public bool isFinishNormal = false;
+    public int sceneIndex;
 
+    [Header("Player Animator Controller")]
     public RuntimeAnimatorController sword;
     public RuntimeAnimatorController spear;
     public RuntimeAnimatorController axe;
@@ -29,16 +34,7 @@ public class GlobalManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-    }
-
-    private void Start()
-    {
         LoadPlayerState();
-    }
-
-    private void OnApplicationQuit()
-    {
-        SavePlayerState();
     }
 
     public void UpdatePlayerHealth(int currentHealth)
@@ -48,17 +44,21 @@ public class GlobalManager : MonoBehaviour
 
     public void SavePlayerState()
     {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
         PlayerPrefs.SetInt("Health", health);
         PlayerPrefs.SetString("Buffs", JsonUtility.ToJson(new BuffList { Buffs = buffs }));
         PlayerPrefs.SetInt("SceneTransitions", sceneTransitionCount);
         PlayerPrefs.SetInt("FinishNormal", isFinishNormal ? 1 : 0);
         PlayerPrefs.SetInt("CurrentWeaponFlag", currentWeaponFlag);
+        PlayerPrefs.SetInt("CurrentSceneIndex", sceneIndex);
         PlayerPrefs.Save();
 
     }
 
     public void LoadPlayerState()
     {
+        sceneIndex = PlayerPrefs.GetInt("CurrentSceneIndex");
+
         health = PlayerPrefs.GetInt("Health", 100);
         string buffsJson = PlayerPrefs.GetString("Buffs", "{}");
         BuffList loadedBuffs = JsonUtility.FromJson<BuffList>(buffsJson);
@@ -96,11 +96,5 @@ public class GlobalManager : MonoBehaviour
     {
         currentWeaponFlag = weaponType;
         ApplyWeaponController(currentWeaponFlag);
-    }
-
-    [System.Serializable]
-    public class BuffList
-    {
-        public List<Buff> Buffs;
     }
 }
