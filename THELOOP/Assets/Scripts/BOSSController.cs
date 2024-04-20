@@ -7,6 +7,7 @@ public class BOSSController : MonoBehaviour
     public DetectionZone zone;
     public GameObject tornadoPrefab;
     public Transform firePoint;
+    public GameObject unknowMagic;
 
     public float walkSpeed = 4f;
     public float walkStopRate = 0.05f;
@@ -14,6 +15,7 @@ public class BOSSController : MonoBehaviour
     Rigidbody2D rb;
     TouchingEvents touchingEvents;
     Animator animator;
+    AudioManager audioManager;
 
     public enum WalkDirection { Right, Left };
     private WalkDirection _walkDirection;
@@ -107,7 +109,7 @@ public class BOSSController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -172,6 +174,19 @@ public class BOSSController : MonoBehaviour
         if (touchingEvents.IsTouch)
         {
             FlipDirection();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (unknowMagic)
+        {
+            GameObject magic = Instantiate(unknowMagic, transform.position, Quaternion.identity);
+
+            if (audioManager)
+            {
+                audioManager.StopMusicSoftly(5f);
+            }
         }
     }
 }

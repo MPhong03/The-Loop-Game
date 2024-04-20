@@ -59,6 +59,8 @@ public class PortalInteraction : MonoBehaviour
     {
         if (isPlayerNear && Input.GetKeyDown(KeyCode.F) && canInteract)
         {
+            interactionUI.SetActive(false);
+
             GlobalManager.Instance.sceneTransitionCount++;
 
             if (GlobalManager.Instance.sceneTransitionCount >= bossSceneCondition && GlobalManager.Instance.isFinishNormal == false)

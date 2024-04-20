@@ -56,6 +56,7 @@ public class PauseMenuController : MonoBehaviour
     {
         Time.timeScale = 1f;
         globalManager.SavePlayerState();
+        pauseMenuUI.SetActive(false);
         loadingScreenController.LoadScene(0);
     }
 
