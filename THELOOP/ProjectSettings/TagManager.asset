@@ -9,6 +9,7 @@ TagManager:
   - Enemies
   - Portal
   - BuffNPC
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Pickup
   - NPC
   - Obstacle
-  - 
+  - Platform
   - 
   - 
   - 
