@@ -14,9 +14,9 @@ public class BossItemController : MonoBehaviour
     public float textDelay = 3f; // Độ trễ giữa các dòng chữ
     private Collider2D col;
     private bool playerInRange = false;
-    private int currentLineIndex = 0;
 
     LoadingScreenController loadingScreenController;
+    private float delayBetweenCharacters = 0.05f;
 
     private void Awake()
     {
@@ -56,16 +56,21 @@ public class BossItemController : MonoBehaviour
             yield return null;
         }
 
-        // Hiện từng dòng chữ
-        while (currentLineIndex < dialogueLines.Length)
+        // Hiện từng dòng chữ với hiệu ứng type writing
+        for (int i = 0; i < dialogueLines.Length; i++)
         {
-            dynamicText.text = dialogueLines[currentLineIndex];
-            dynamicText.gameObject.SetActive(true);
+            string currentLine = dialogueLines[i];
+            dynamicText.text = ""; // Xóa nội dung cũ của dynamicText
+
+            // Hiển thị từng ký tự trong dòng chữ với hiệu ứng type writing
+            for (int j = 0; j < currentLine.Length; j++)
+            {
+                dynamicText.text += currentLine[j];
+                yield return new WaitForSeconds(delayBetweenCharacters);
+            }
 
             // Đợi một khoảng thời gian trước khi hiển thị dòng chữ tiếp theo
             yield return new WaitForSeconds(textDelay);
-
-            currentLineIndex++;
         }
 
         // Ẩn blackout panel và các dòng chữ dần dần

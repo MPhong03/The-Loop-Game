@@ -46,12 +46,16 @@ public class PlayerDeathHandler : MonoBehaviour
         ClearPlayerPrefs();
         Time.timeScale = 1;
         loadingScreenController.LoadScene(1);
+
+        gameOverPanel.SetActive(false);
     }
 
     private void GoToMainMenu()
     {
         Time.timeScale = 1;
         loadingScreenController.LoadScene(0);
+
+        gameOverPanel.SetActive(false);
     }
 
     private void ClearPlayerPrefs()

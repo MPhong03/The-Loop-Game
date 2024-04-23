@@ -49,6 +49,7 @@ MonoBehaviour:
   buffs: []
   sceneTransitionCount: -1
   isFinishNormal: 0
+  sceneIndex: 0
   sword: {fileID: 9100000, guid: a38b5e8bb9bfd06438f2a444d9156303, type: 2}
   spear: {fileID: 9100000, guid: c291fb6640ad869418f29b63f5acecc4, type: 2}
   axe: {fileID: 9100000, guid: 918fc056fc34514468fbc86f50c9d7bd, type: 2}

@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class SettingsController : MonoBehaviour
 {
-    public AudioMixer audio;
+    public AudioMixer audioMixer;
     public void SetVolume (float volume)
     {
-        audio.SetFloat("Volume", volume);
+        audioMixer.SetFloat("Volume", volume);
     }
 
     public void SetQuality (int qualityIndex)

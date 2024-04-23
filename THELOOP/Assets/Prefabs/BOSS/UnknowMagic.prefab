@@ -448,11 +448,15 @@ MonoBehaviour:
   blackoutPanel: {fileID: 437427378564795128}
   blackoutText: {fileID: 1102581031964336574}
   dialogueLines:
-  - Thank you my hero for eliminating this threat
-  - However...
-  - Your journey is not over yet
-  - So...
-  - I'm sorry...
+  - This "Phere"?
+  - ...
+  - What?
+  - What's going on?
+  - I can't ... hold my body
+  - '"FOREVER"'
+  - Who? Who's talking?
+  - My head!
+  - ...
   fadeDuration: 3
   textDelay: 3
 --- !u!1 &8068391066744779127
