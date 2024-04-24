@@ -11,16 +11,21 @@ public class GoblinScript : MonoBehaviour
 
     public float walkSpeed = 3f;
     public float walkStopRate = 0.05f;
+    public float jumpForce = 10f;
 
     Rigidbody2D rb;
     TouchingEvents touchingEvents;
     Animator animator;
+    CapsuleCollider2D col;
 
     public enum WalkDirection { Right, Left };
     private WalkDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
     private Transform player;
     private Vector2 playerLastPosition;
+
+    public ContactFilter2D contactFilter;
+    public float playerDistanceThreshold = 6f;
 
     public WalkDirection walkDirection
     {
@@ -82,22 +87,45 @@ public class GoblinScript : MonoBehaviour
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerLastPosition = player.position;
+        col = GetComponent<CapsuleCollider2D>();
     }
     private void FixedUpdate()
     {
-        //if (touchingEvents.IsWall && touchingEvents.IsTouch)
-        //{
-        //    FlipDirection();
-        //}
+        if (player != null && touchingEvents.IsTouch && Mathf.Abs(player.position.x - transform.position.x) < 2.5f)
+        {
+            float yDistance = player.position.y - transform.position.y;
 
-        //if (CanMove)
-        //{
-        //    rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
-        //}
-        //else
-        //{
-        //    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y); ;
-        //}
+            if (yDistance < 0 && Mathf.Abs(yDistance) >= playerDistanceThreshold)
+            {
+                RaycastHit2D[] hits = new RaycastHit2D[1];
+
+                col.Cast(Vector2.down, contactFilter, hits, 0.05f);
+
+                int hitCount = col.Cast(Vector2.down, contactFilter, hits, 0.05f);
+
+                if (hitCount > 0 && hits[0].collider.CompareTag("Platform"))
+                {
+
+                    Physics2D.IgnoreCollision(col, hits[0].collider, true);
+
+                    StartCoroutine(ResetCollisionAfterDelay(hits[0].collider));
+                }
+            }
+            else if (yDistance > 0 && Mathf.Abs(yDistance) >= playerDistanceThreshold)
+            {
+                // Kiểm tra nếu enemy chưa đạt đến độ cao tối đa của nhảy
+                if (transform.position.y < player.position.y + 6f)
+                {
+                    // Thực hiện hành động nhảy lên
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                }
+                else
+                {
+                    // Nếu đã đạt đến độ cao tối đa, giảm tốc độ lên hoặc ngừng di chuyển lên
+                    rb.velocity = new Vector2(rb.velocity.x, 0f);
+                }
+            }
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -108,6 +136,7 @@ public class GoblinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (player != null && CanMove)
         {
             // Tính toán hướng vector từ Goblin tới người chơi trên trục x
@@ -134,6 +163,13 @@ public class GoblinScript : MonoBehaviour
             AttackCoolDown -= Time.deltaTime;
         }
         
+    }
+
+    private IEnumerator ResetCollisionAfterDelay(Collider2D colliderToReset)
+    {
+        yield return new WaitForSeconds(1f);
+
+        Physics2D.IgnoreCollision(col, colliderToReset, false);
     }
 
     private void FlipDirection()

@@ -1254,7 +1254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9300114
+      value: -1.9300107
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9786,6 +9786,10 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5474593499346202897, guid: b5f4675e3c12e344980cad78087de118, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.9500122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474593499346202897, guid: b5f4675e3c12e344980cad78087de118, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -10063,7 +10067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1452188177455687306, guid: 78ea8376ac8f4b245a94767cba1930e3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.1399841
+      value: 1.1400146
       objectReference: {fileID: 0}
     - target: {fileID: 1452188177455687306, guid: 78ea8376ac8f4b245a94767cba1930e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10096,6 +10100,10 @@ PrefabInstance:
     - target: {fileID: 5221697449015323202, guid: 78ea8376ac8f4b245a94767cba1930e3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901138719582849460, guid: 78ea8376ac8f4b245a94767cba1930e3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.1999817
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

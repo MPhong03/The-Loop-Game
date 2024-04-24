@@ -8,20 +8,24 @@ public class FireWormController : MonoBehaviour
     public DetectionZone zone;
     public GameObject fireballPrefab;
     public Transform firePoint;
-
+    
     public float walkSpeed = 3f;
     public float walkStopRate = 0.05f;
-
+    public float jumpForce = 10f;
 
     Rigidbody2D rb;
     TouchingEvents touchingEvents;
     Animator animator;
+    CapsuleCollider2D col;
 
     public enum WalkDirection { Right, Left };
     private WalkDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
     private Transform player;
     private Vector2 playerLastPosition;
+
+    public ContactFilter2D contactFilter;
+    public float playerDistanceThreshold = 5f;
 
     public WalkDirection walkDirection
     {
@@ -87,6 +91,38 @@ public class FireWormController : MonoBehaviour
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerLastPosition = player.position;
+        col = GetComponent<CapsuleCollider2D>();
+    }
+
+    private void FixedUpdate()
+    {
+        if (player != null && touchingEvents.IsTouch && Mathf.Abs(player.position.x - transform.position.x) < 2.5f)
+        {
+            float yDistance = player.position.y - transform.position.y;
+
+            if (yDistance < 0 && Mathf.Abs(yDistance) >= playerDistanceThreshold)
+            {
+                RaycastHit2D[] hits = new RaycastHit2D[1];
+
+                col.Cast(Vector2.down, contactFilter, hits, 0.05f);
+
+                int hitCount = col.Cast(Vector2.down, contactFilter, hits, 0.05f);
+
+                if (hitCount > 0 && hits[0].collider.CompareTag("Platform"))
+                {
+
+                    Physics2D.IgnoreCollision(col, hits[0].collider, true);
+
+                    StartCoroutine(ResetCollisionAfterDelay(hits[0].collider));
+                }
+            }
+            else if (yDistance > 0 && Mathf.Abs(yDistance) >= playerDistanceThreshold)
+            {
+                // Thực hiện hành động nhảy lên, ví dụ:
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
+
+        }
     }
 
     // Update is called once per frame
@@ -118,6 +154,13 @@ public class FireWormController : MonoBehaviour
             AttackCoolDown -= Time.deltaTime;
         }
 
+    }
+
+    private IEnumerator ResetCollisionAfterDelay(Collider2D colliderToReset)
+    {
+        yield return new WaitForSeconds(1f);
+
+        Physics2D.IgnoreCollision(col, colliderToReset, false);
     }
 
     public void FireProjectile()

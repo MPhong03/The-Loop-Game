@@ -142,6 +142,9 @@ public class PlayerController : MonoBehaviour
 
     public float skillCooldown = 7f;
     private bool canUseSkill1 = true;
+
+    public ContactFilter2D contactFilter;
+    private CapsuleCollider2D col;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -152,6 +155,7 @@ public class PlayerController : MonoBehaviour
         canDash = true;
         damage = GetComponent<DamageController>();
         soundManager = GetComponent<PlayerSoundManager>();
+        col = GetComponent<CapsuleCollider2D>();
     }
 
     private void Start()
@@ -240,6 +244,33 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnDown(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+
+            RaycastHit2D[] hits = new RaycastHit2D[1];
+
+            col.Cast(Vector2.down, contactFilter, hits, 0.05f);
+
+            int hitCount = col.Cast(Vector2.down, contactFilter, hits, 0.05f);
+
+            for (int i = 0; i < hitCount; i++)
+            {
+                Debug.Log("Object hit: " + hits[i].collider.gameObject.name);
+            }
+
+            if (hitCount > 0 && hits[0].collider.CompareTag("Platform"))
+            {
+                Debug.Log("Success!");
+
+                Physics2D.IgnoreCollision(col, hits[0].collider, true);
+
+                StartCoroutine(ResetCollisionAfterDelay(hits[0].collider));
+            }
+        }
+    }
+
     public void OnDash(InputAction.CallbackContext context)
     {
         if (context.performed && canDash)
@@ -248,6 +279,13 @@ public class PlayerController : MonoBehaviour
             soundManager.PlayDashSound();
             StartCoroutine(Dash());
         }
+    }
+
+    private IEnumerator ResetCollisionAfterDelay(Collider2D colliderToReset)
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        Physics2D.IgnoreCollision(col, colliderToReset, false);
     }
 
     private IEnumerator Dash()

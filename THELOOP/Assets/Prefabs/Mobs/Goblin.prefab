@@ -822,7 +822,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -906,6 +906,22 @@ MonoBehaviour:
   groundZone: {fileID: 4900563221777680046}
   walkSpeed: 6
   walkStopRate: 0.05
+  jumpForce: 40
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 64
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  playerDistanceThreshold: 6
   _hasTarget: 0
 --- !u!114 &4086466786280168532
 MonoBehaviour:

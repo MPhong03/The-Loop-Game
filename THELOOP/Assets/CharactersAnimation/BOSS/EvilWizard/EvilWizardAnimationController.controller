@@ -130,7 +130,7 @@ MonoBehaviour:
   updateOnStateMachineEnter: 0
   updateOnStateMachineExit: 0
   onEnter: 0
-  onExit: 4
+  onExit: 3
 --- !u!114 &-4713789948889286041
 MonoBehaviour:
   m_ObjectHideFlags: 1
