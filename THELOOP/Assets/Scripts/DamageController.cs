@@ -30,6 +30,7 @@ public class DamageController : MonoBehaviour
 
             if (_health <= 0)
             {
+                animator.enabled = true;
                 IsAlive = false;
             }
 
