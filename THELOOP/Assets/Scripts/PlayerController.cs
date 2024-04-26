@@ -462,21 +462,27 @@ public class PlayerController : MonoBehaviour
         // Freeze all Enemies
         foreach (GameObject enemy in enemies)
         {
-            Animator enemyAnimator = enemy.GetComponent<Animator>();
-            Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>();
-            if (enemyAnimator != null)
+            // Kiểm tra xem enemy còn tồn tại không
+            if (enemy != null)
             {
-                enemyAnimator.enabled = false;
-            }
-            if (enemyRb != null)
-            {
-                enemyRb.constraints = RigidbodyConstraints2D.FreezeAll;
-                GameObject effect = Instantiate(freezeEffectPrefab, enemy.transform.position, Quaternion.identity);
-                Animator effectAnimator = effect.GetComponent<Animator>();
-                AnimatorStateInfo stateInfo = effectAnimator.GetCurrentAnimatorStateInfo(0);
-                float effectDuration = stateInfo.length;
+                Animator enemyAnimator = enemy.GetComponent<Animator>();
+                Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>();
 
-                Destroy(effect, effectDuration);
+                if (enemyAnimator != null)
+                {
+                    enemyAnimator.enabled = false;
+                }
+
+                if (enemyRb != null)
+                {
+                    enemyRb.constraints = RigidbodyConstraints2D.FreezeAll;
+                    GameObject effect = Instantiate(freezeEffectPrefab, enemy.transform.position, Quaternion.identity);
+                    Animator effectAnimator = effect.GetComponent<Animator>();
+                    AnimatorStateInfo stateInfo = effectAnimator.GetCurrentAnimatorStateInfo(0);
+                    float effectDuration = stateInfo.length;
+
+                    Destroy(effect, effectDuration);
+                }
             }
         }
 
@@ -488,17 +494,22 @@ public class PlayerController : MonoBehaviour
         // Unfreeze
         foreach (GameObject enemy in enemies)
         {
-            Animator enemyAnimator = enemy.GetComponent<Animator>();
-            Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>();
+            // Kiểm tra xem enemy còn tồn tại không
+            if (enemy != null)
+            {
+                Animator enemyAnimator = enemy.GetComponent<Animator>();
+                Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>();
 
-            if (enemyAnimator != null)
-            {
-                enemyAnimator.enabled = true;
-            }
-            if (enemyRb != null)
-            {
-                enemyRb.constraints = RigidbodyConstraints2D.None;
-                enemyRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                if (enemyAnimator != null)
+                {
+                    enemyAnimator.enabled = true;
+                }
+
+                if (enemyRb != null)
+                {
+                    enemyRb.constraints = RigidbodyConstraints2D.None;
+                    enemyRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
             }
         }
 
