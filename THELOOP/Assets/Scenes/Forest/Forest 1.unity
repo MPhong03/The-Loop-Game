@@ -948,6 +948,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 84876805941672167, guid: 870a21582d976634783a1e90f0e01a09, type: 3}
+      propertyPath: buffStats
+      value: 
+      objectReference: {fileID: 1506684505}
+    - target: {fileID: 84876805941672167, guid: 870a21582d976634783a1e90f0e01a09, type: 3}
       propertyPath: buffTitle
       value: 
       objectReference: {fileID: 181323999}
@@ -11728,6 +11732,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72bfd53f93f257346ae81f61efd0af08, type: 3}
+--- !u!114 &1506684505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7230210624992202421, guid: 78ea8376ac8f4b245a94767cba1930e3, type: 3}
+  m_PrefabInstance: {fileID: 181323995}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1570345198
 GameObject:
   m_ObjectHideFlags: 0

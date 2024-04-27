@@ -145,6 +145,9 @@ public class PlayerController : MonoBehaviour
 
     public ContactFilter2D contactFilter;
     private CapsuleCollider2D col;
+
+    private AttackController[] attackControllers;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -156,6 +159,7 @@ public class PlayerController : MonoBehaviour
         damage = GetComponent<DamageController>();
         soundManager = GetComponent<PlayerSoundManager>();
         col = GetComponent<CapsuleCollider2D>();
+        attackControllers = GetComponentsInChildren<AttackController>();
     }
 
     private void Start()
@@ -541,22 +545,40 @@ public class PlayerController : MonoBehaviour
         {
             // TODO: Thêm các case cho các buff khác
             case 1:
-                UpdateSkillStatus(true, false, false, false, false, false);
+                UpdateSkillStatus(true, false, false, false, false, false); // Pyro Blade
                 break;
             case 2:
-                UpdateSkillStatus(false, false, false, true, false, false);
+                UpdateSkillStatus(false, false, false, true, false, false); // Heal
                 break;
             case 3:
-                UpdateSkillStatus(false, true, false, false, false, false);
+                UpdateSkillStatus(false, true, false, false, false, false); // Lightning
                 break;
             case 4:
-                UpdateSkillStatus(false, false, false, false, false, true);
+                UpdateSkillStatus(false, false, false, false, false, true); // Freeze
                 break;
             case 5:
-                UpdateSkillStatus(false, false, true, false, false, false);
+                UpdateSkillStatus(false, false, true, false, false, false); // Shield
                 break;
             case 6:
-                UpdateSkillStatus(false, false, false, false, true, false);
+                UpdateSkillStatus(false, false, false, false, true, false); // Anemo Blade
+                break;
+            case 7:
+                HealthBuff(20); // Hydro - Health
+                break;
+            case 8:
+                AttackBuff(5); // Pyro - Attack
+                break;
+            case 9:
+                DashBuff(0.1f); // Electro - Dash
+                break;
+            case 10:
+                DefenseBuff(2); // Geo - Defense
+                break;
+            case 11:
+                SkillCooldownBuff(0.5f); // Cryo - Skill
+                break;
+            case 12:
+                WalkSpeed(1.5f); // Anemo - Speed
                 break;
             default:
                 Debug.Log("Buff tag not recognized");
@@ -572,5 +594,38 @@ public class PlayerController : MonoBehaviour
         skillStatusFour = four;
         skillStatusFive = five;
         skillStatusSix = six;
+    }
+
+    private void HealthBuff(int amount)
+    {
+        damage.MaxHealth += amount;
+    }
+
+    private void AttackBuff(int amount)
+    {
+        foreach (AttackController attackController in attackControllers)
+        {
+            attackController.attackDamage += amount;
+        }
+    }
+
+    private void DashBuff(float amount)
+    {
+        dashCooldown -= amount;
+    }
+
+    private void DefenseBuff(int amount)
+    {
+        damage.defense += amount;
+    }
+
+    private void SkillCooldownBuff(float amount)
+    {
+        skillCooldown -= amount;
+    }
+
+    private void WalkSpeed(float amount)
+    {
+        walkSpeed += amount;
     }
 }

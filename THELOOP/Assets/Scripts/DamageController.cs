@@ -52,6 +52,8 @@ public class DamageController : MonoBehaviour
     [SerializeField]
     public bool InvicibleBuff = false;
 
+    public int defense = 0;
+
     public bool IsAlive 
     { 
         get
@@ -106,7 +108,7 @@ public class DamageController : MonoBehaviour
     {
         if (IsAlive && !isInvincible && !InvicibleBuff)
         {
-            Health -= damage;
+            Health -= (damage - defense);
             isInvincible = true;
 
             IsHit = true;

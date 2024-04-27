@@ -66,5 +66,23 @@ MonoBehaviour:
     description: When using special skill, player player will launch an anemo blade
       forward
     tag: 6
+  - title: Hydro
+    description: +20 Max HP points
+    tag: 7
+  - title: Pyro
+    description: +5 Attack points
+    tag: 8
+  - title: Electro
+    description: -0.1 second of Dash cooldown
+    tag: 9
+  - title: Geo
+    description: -5 damage taken points
+    tag: 10
+  - title: Cryo
+    description: -0.5 second of Skill cooldown
+    tag: 11
+  - title: Anemo
+    description: + 1.5 walk speed
+    tag: 12
   buffPanelUI: {fileID: 0}
   buffActivatorPrefab: {fileID: 1402704209960761475, guid: c071d1cbb46ea2f4d93ebd7e3f9951ca, type: 3}
