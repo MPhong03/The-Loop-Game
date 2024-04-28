@@ -10,6 +10,7 @@ TagManager:
   - Portal
   - BuffNPC
   - Platform
+  - PopUP
   layers:
   - Default
   - TransparentFX
