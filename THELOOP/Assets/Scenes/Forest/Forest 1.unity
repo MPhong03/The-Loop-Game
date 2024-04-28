@@ -395,11 +395,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3901892668265929094, guid: 0cdb4460109d0574e9cceb2aedb2ab30, type: 3}
       propertyPath: max
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3901892668265929094, guid: 0cdb4460109d0574e9cceb2aedb2ab30, type: 3}
       propertyPath: min
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3901892668265929094, guid: 0cdb4460109d0574e9cceb2aedb2ab30, type: 3}
       propertyPath: playerObject
@@ -11967,7 +11967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5699905
+      value: -0.5699837
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12344,10 +12344,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 893831866}
     m_Modifications:
-    - target: {fileID: 1630053998016393973, guid: 1dd12b8c958a8bf48b937c462f1e6c65, type: 3}
-      propertyPath: spawnLimit
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1630053998016393973, guid: 1dd12b8c958a8bf48b937c462f1e6c65, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 

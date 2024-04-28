@@ -24,6 +24,13 @@ public class PlayerDeathHandler : MonoBehaviour
 
     public void OnPlayerDeath()
     {
+        GameObject[] damageTextObjects = GameObject.FindGameObjectsWithTag("DamageText");
+
+        foreach (GameObject obj in damageTextObjects)
+        {
+            obj.SetActive(false);
+        }
+
         gameOverPanel.SetActive(true);
         Time.timeScale = 0;
 

@@ -222,8 +222,6 @@ public class PlayerController : MonoBehaviour
             IsMoving = false;
         }
 
-        
-
     }
 
     private void SetFacingDirection(Vector2 moveInput)

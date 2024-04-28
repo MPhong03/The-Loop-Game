@@ -1233,11 +1233,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3901892668265929094, guid: 0cdb4460109d0574e9cceb2aedb2ab30, type: 3}
       propertyPath: max
-      value: 6
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3901892668265929094, guid: 0cdb4460109d0574e9cceb2aedb2ab30, type: 3}
       propertyPath: min
-      value: 2
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3901892668265929094, guid: 0cdb4460109d0574e9cceb2aedb2ab30, type: 3}
       propertyPath: playerObject
@@ -1662,7 +1662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9300103
+      value: -1.930009
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.y
