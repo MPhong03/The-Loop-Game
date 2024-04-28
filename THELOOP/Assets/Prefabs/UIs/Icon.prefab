@@ -201,8 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageCooldown: {fileID: 3295685375700994204}
-  dashCooldown: 1.2
-  key: 108
+  isSpecialSkill: 0
 --- !u!1 &3482836836986406463
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,8 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageCooldown: {fileID: 5827778309688409516}
-  dashCooldown: 7
-  key: 105
+  isSpecialSkill: 1
 --- !u!1 &6581977771998956800
 GameObject:
   m_ObjectHideFlags: 0

@@ -337,7 +337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -97073674, guid: a8fb7216c6468ad4d9020ba9d75ea3c4, type: 3}
+  m_Sprite: {fileID: -783292895, guid: a8fb7216c6468ad4d9020ba9d75ea3c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -361,3 +361,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: {fileID: 3311408334461720167}
   descriptionText: {fileID: 5479152832709488355}
+  buffPanel: {fileID: 0}

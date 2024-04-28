@@ -141,7 +141,8 @@ public class PlayerController : MonoBehaviour
     public bool skillStatusSix = false;
 
     public float skillCooldown = 7f;
-    private bool canUseSkill1 = true;
+    public float skillTime = 0f;
+    public bool canUseSkill = true;
 
     public ContactFilter2D contactFilter;
     private CapsuleCollider2D col;
@@ -155,7 +156,6 @@ public class PlayerController : MonoBehaviour
         touchingEvents = GetComponent<TouchingEvents>();
         trailRenderer = GetComponent<TrailRenderer>();
         normalGravity = rb.gravityScale;
-        canDash = true;
         damage = GetComponent<DamageController>();
         soundManager = GetComponent<PlayerSoundManager>();
         col = GetComponent<CapsuleCollider2D>();
@@ -281,7 +281,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Dash conditions met, invoking Dash, Player: " + gameObject.activeInHierarchy + gameObject.activeSelf);
             soundManager.PlayDashSound();
-            StartCoroutine(Dash());
+            StartCoroutine(DashCoroutine());
         }
     }
 
@@ -292,31 +292,34 @@ public class PlayerController : MonoBehaviour
         Physics2D.IgnoreCollision(col, colliderToReset, false);
     }
 
+    private IEnumerator DashCoroutine()
+    {
+        yield return Dash();
+        yield return new WaitForSeconds(dashCooldown - 0.05f);
+        canDash = true;
+        yield return new WaitForSeconds(0.05f);
+        canDash = true;
+    }
+
     private IEnumerator Dash()
     {
         Debug.Log("Dash!");
         canDash = false;
         isDashing = true;
         damage.isInvincible = true;
-        //float originalGravity = rb.gravityScale;
-        //rb.gravityScale = 0;
         rb.velocity = new Vector2(transform.localScale.x * dashPower, 0);
         animator.SetBool(AnimationVariables.isDashing, isDashing);
         trailRenderer.emitting = true;
         yield return new WaitForSeconds(dashTime);
         trailRenderer.emitting = false;
-        //rb.gravityScale = originalGravity;
         isDashing = false;
         damage.isInvincible = false;
         animator.SetBool(AnimationVariables.isDashing, isDashing);
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
     }
 
     private IEnumerator DashAttack()
     {
         Debug.Log("DashAttack!");
-        canDash = false;
         isDashing = true;
 
         rb.velocity = new Vector2(transform.localScale.x * dashAttackPower, 0);
@@ -324,7 +327,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashAttackTime);
 
         isDashing = false;
-        canDash = true;
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -343,7 +345,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnSpecialSkill(InputAction.CallbackContext context)
     {
-        if (context.performed && canUseSkill1)
+        if (context.performed && canUseSkill)
         {
             if (skillStatusOne)
             {
@@ -375,7 +377,7 @@ public class PlayerController : MonoBehaviour
     // FIRE BLADE SKILL
     private IEnumerator SpawnFireBladePrefab()
     {
-        canUseSkill1 = false;
+        canUseSkill = false;
         Vector3 spawnDirection = _isFacingRight ? Vector2.right : Vector2.left;
 
         GameObject spawnedSkill = Instantiate(skillPrefab, transform.position, Quaternion.identity);
@@ -383,14 +385,16 @@ public class PlayerController : MonoBehaviour
 
         soundManager.PlayFireSound();
 
-        yield return new WaitForSeconds(skillCooldown);
-        canUseSkill1 = true;
+        yield return new WaitForSeconds(skillCooldown - 0.05f);
+        canUseSkill = true;
+        yield return new WaitForSeconds(0.05f);
+        canUseSkill = true;
     }
 
     // LIGHTNING SKILL
     private IEnumerator SpawnLightningSkillPrefab()
     {
-        canUseSkill1 = false;
+        canUseSkill = false;
         GameObject nearestEnemy = FindNearestEnemyWithTag("Enemies");
 
         if (nearestEnemy != null)
@@ -399,14 +403,16 @@ public class PlayerController : MonoBehaviour
             soundManager.PlayLightningSound();
         }
 
-        yield return new WaitForSeconds(skillCooldown);
-        canUseSkill1 = true;
+        yield return new WaitForSeconds(skillCooldown - 0.05f);
+        canUseSkill = true;
+        yield return new WaitForSeconds(0.05f);
+        canUseSkill = true;
     }
 
     // SHIELD SKILL
     private IEnumerator ShieldSkill()
     {
-        canUseSkill1 = false;
+        canUseSkill = false;
 
         damage.InvicibleBuff = true;
 
@@ -416,7 +422,7 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Shield activated. Player is invincible!");
 
-        yield return new WaitForSeconds(shieldTime);
+        yield return new WaitForSeconds(skillTime);
 
         damage.InvicibleBuff = false;
 
@@ -424,26 +430,28 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Shield deactivated. Player is no longer invincible.");
 
-        yield return new WaitForSeconds(skillCooldown);
-
-        canUseSkill1 = true;
+        yield return new WaitForSeconds(skillCooldown - 0.05f);
+        canUseSkill = true;
+        yield return new WaitForSeconds(0.05f);
+        canUseSkill = true;
     }
 
     // HEAL SKILL
     private IEnumerator HealSkill()
     {
-        canUseSkill1 = false;
+        canUseSkill = false;
         soundManager.PlayHealSound();
         damage.Heal(50);
-        yield return new WaitForSeconds(skillCooldown);
-
-        canUseSkill1 = true;
+        yield return new WaitForSeconds(skillCooldown - 0.05f);
+        canUseSkill = true;
+        yield return new WaitForSeconds(0.05f);
+        canUseSkill = true;
     }
 
     // ANEMO SKILL
     private IEnumerator SpawnAnemoBladePrefab()
     {
-        canUseSkill1 = false;
+        canUseSkill = false;
         Vector3 spawnDirection = _isFacingRight ? Vector2.right : Vector2.left;
 
         GameObject spawnedSkill = Instantiate(anemoPrefab, transform.position, Quaternion.identity);
@@ -451,14 +459,16 @@ public class PlayerController : MonoBehaviour
 
         soundManager.PlayWindSound();
 
-        yield return new WaitForSeconds(skillCooldown);
-        canUseSkill1 = true;
+        yield return new WaitForSeconds(skillCooldown - 0.05f);
+        canUseSkill = true;
+        yield return new WaitForSeconds(0.05f);
+        canUseSkill = true;
     }
 
     // FREEZE SKILL
     private IEnumerator FreezeEnemies()
     {
-        canUseSkill1 = false;
+        canUseSkill = false;
 
         // Find all tag "Enemies"
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemies");
@@ -493,7 +503,7 @@ public class PlayerController : MonoBehaviour
         soundManager.PlayFreezeSound();
 
         // Freeze time
-        yield return new WaitForSeconds(freezeTime);
+        yield return new WaitForSeconds(skillTime);
 
         // Unfreeze
         foreach (GameObject enemy in enemies)
@@ -517,7 +527,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        canUseSkill1 = true;
+        yield return new WaitForSeconds(skillCooldown - 0.05f);
+        canUseSkill = true;
+        yield return new WaitForSeconds(0.05f);
+        canUseSkill = true;
     }
 
     private GameObject FindNearestEnemyWithTag(string tag)
@@ -545,22 +558,22 @@ public class PlayerController : MonoBehaviour
         {
             // TODO: Thêm các case cho các buff khác
             case 1:
-                UpdateSkillStatus(true, false, false, false, false, false); // Pyro Blade
+                UpdateSkillStatus(true, false, false, false, false, false, 0f); // Pyro Blade
                 break;
             case 2:
-                UpdateSkillStatus(false, false, false, true, false, false); // Heal
+                UpdateSkillStatus(false, false, false, true, false, false, 0f); // Heal
                 break;
             case 3:
-                UpdateSkillStatus(false, true, false, false, false, false); // Lightning
+                UpdateSkillStatus(false, true, false, false, false, false, 0f); // Lightning
                 break;
             case 4:
-                UpdateSkillStatus(false, false, false, false, false, true); // Freeze
+                UpdateSkillStatus(false, false, false, false, false, true, freezeTime); // Freeze
                 break;
             case 5:
-                UpdateSkillStatus(false, false, true, false, false, false); // Shield
+                UpdateSkillStatus(false, false, true, false, false, false, shieldTime); // Shield
                 break;
             case 6:
-                UpdateSkillStatus(false, false, false, false, true, false); // Anemo Blade
+                UpdateSkillStatus(false, false, false, false, true, false, 0f); // Anemo Blade
                 break;
             case 7:
                 HealthBuff(20); // Hydro - Health
@@ -586,7 +599,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void UpdateSkillStatus(bool one, bool two, bool three, bool four, bool five, bool six)
+    private void UpdateSkillStatus(bool one, bool two, bool three, bool four, bool five, bool six, float time)
     {
         skillStatusOne = one;
         skillStatusTwo = two;
@@ -594,6 +607,7 @@ public class PlayerController : MonoBehaviour
         skillStatusFour = four;
         skillStatusFive = five;
         skillStatusSix = six;
+        skillTime = time;
     }
 
     private void HealthBuff(int amount)

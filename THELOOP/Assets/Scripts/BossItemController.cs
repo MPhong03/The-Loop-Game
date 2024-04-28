@@ -14,6 +14,7 @@ public class BossItemController : MonoBehaviour
     public float textDelay = 3f; // Độ trễ giữa các dòng chữ
     private Collider2D col;
     private bool playerInRange = false;
+    private bool canInteract = true;
 
     LoadingScreenController loadingScreenController;
     private float delayBetweenCharacters = 0.05f;
@@ -27,14 +28,17 @@ public class BossItemController : MonoBehaviour
     private void Update()
     {
         // Kiểm tra nếu người chơi ở gần và nhấn phím F
-        if (playerInRange && Input.GetKeyDown(KeyCode.F))
+        if (playerInRange && Input.GetKeyDown(KeyCode.F) && canInteract)
         {
+            AudioManager.instance.StopMusicSoftly(3f);
             StartCoroutine(ShowDialogue());
         }
     }
 
     private IEnumerator ShowDialogue()
     {
+        canInteract = false;
+
         popupButton.SetActive(false);
 
         // Tạo một TMP_Text động để hiển thị dòng chữ trong blackout panel
@@ -93,6 +97,8 @@ public class BossItemController : MonoBehaviour
 
         // Restart game
         RestartGame();
+
+        canInteract = true;
 
         // Destroy dynamicText sau khi hoàn thành
         Destroy(dynamicText.gameObject);

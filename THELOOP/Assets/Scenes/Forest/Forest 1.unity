@@ -542,6 +542,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResumeGame
       objectReference: {fileID: 0}
+    - target: {fileID: 8901138719582849460, guid: 78ea8376ac8f4b245a94767cba1930e3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.8306885
+      objectReference: {fileID: 0}
     - target: {fileID: 8998179109239433870, guid: 78ea8376ac8f4b245a94767cba1930e3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1356,23 +1360,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 167.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 36.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
@@ -1394,10 +1386,6 @@ PrefabInstance:
     - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 54.2
       objectReference: {fileID: 0}
     - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1442,10 +1430,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuffPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 6950536106040675166, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7004541458609297149, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1472,11 +1456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7004541458609297149, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7004541458609297149, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7004541458609297149, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11983,7 +11967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5699906
+      value: -0.56999105
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12360,6 +12344,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 893831866}
     m_Modifications:
+    - target: {fileID: 1630053998016393973, guid: 1dd12b8c958a8bf48b937c462f1e6c65, type: 3}
+      propertyPath: spawnLimit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1630053998016393973, guid: 1dd12b8c958a8bf48b937c462f1e6c65, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 

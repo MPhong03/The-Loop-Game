@@ -1749,7 +1749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.309996
+      value: 15.309994
       objectReference: {fileID: 0}
     - target: {fileID: 2120217524326382894, guid: f5159eac8af3b9040bcde167b6ffa61d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10472,10 +10472,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuffPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 6950536106040675166, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7004541458609297149, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10502,11 +10498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7004541458609297149, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7004541458609297149, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7004541458609297149, guid: bb899d65b2c000d4dab7b9c8fd54453e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10708,14 +10704,6 @@ PrefabInstance:
     - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 167.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 36.1
       objectReference: {fileID: 0}
     - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
       propertyPath: m_LocalPosition.x

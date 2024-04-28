@@ -8182,6 +8182,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResumeGame
       objectReference: {fileID: 0}
+    - target: {fileID: 8901138719582849460, guid: 78ea8376ac8f4b245a94767cba1930e3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.830719
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
