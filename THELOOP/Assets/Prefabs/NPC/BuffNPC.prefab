@@ -409,6 +409,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299867555434496063, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -452,9 +460,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3446677242138279282, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 164.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446677242138279282, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744285210261143222, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1410797321, guid: a8fb7216c6468ad4d9020ba9d75ea3c4, type: 3}
     - target: {fileID: 6740321582308702708, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
       propertyPath: m_Name
       value: PopUpButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740321582308702708, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565592785988452, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_text
+      value: Press F to Read
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565592785988452, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565592785988452, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565592785988452, guid: 32fd816cd703f544cae4ce632a47d7e0, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

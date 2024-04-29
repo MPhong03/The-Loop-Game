@@ -3417,7 +3417,7 @@ MonoBehaviour:
   jumpForce: 35
   canDash: 1
   isDashing: 0
-  dashPower: 30
+  dashPower: 40
   dashTime: 0.2
   dashCooldown: 1
   dashGravity: 1
