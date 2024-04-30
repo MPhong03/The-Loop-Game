@@ -400,6 +400,7 @@ MonoBehaviour:
   isInvincible: 0
   invincibleTime: 0.05
   InvicibleBuff: 0
+  defense: 0
 --- !u!114 &3636701799038321474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,6 +419,11 @@ MonoBehaviour:
   unknowMagic: {fileID: 5954149846278886536, guid: 988ff058477eeab4392f3d5bdeae8555, type: 3}
   walkSpeed: 4
   walkStopRate: 0.05
+  activeSpawnHP: 500
+  skullPrefab: {fileID: 7245090107804516985, guid: 86b03ff0770ffdb49adb2b91e2846258, type: 3}
+  leftSpawnPoints: []
+  rightSpawnPoints: []
+  spawnInterval: 10
   _hasTarget: 0
 --- !u!114 &2467742638297910025
 MonoBehaviour:

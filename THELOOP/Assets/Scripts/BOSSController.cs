@@ -16,12 +16,21 @@ public class BOSSController : MonoBehaviour
     TouchingEvents touchingEvents;
     Animator animator;
     AudioManager audioManager;
+    DamageController damageController;
 
     public enum WalkDirection { Right, Left };
     private WalkDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
     private Transform player;
     private Vector2 playerLastPosition;
+
+    [Header("Under 500HP")]
+    public int activeSpawnHP = 500;
+    public GameObject skullPrefab;
+    public Transform[] leftSpawnPoints;
+    public Transform[] rightSpawnPoints;
+    public float spawnInterval = 6f;
+    private bool isSpawning = false;
 
     public WalkDirection walkDirection
     {
@@ -87,6 +96,7 @@ public class BOSSController : MonoBehaviour
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerLastPosition = player.position;
+        damageController = GetComponent<DamageController>();
     }
     private void FixedUpdate()
     {
@@ -138,6 +148,11 @@ public class BOSSController : MonoBehaviour
         {
             AttackCoolDown -= Time.deltaTime;
         }
+
+        if (damageController.Health <= activeSpawnHP)
+        {
+            StartSpawning();
+        }
     }
 
     public void FireProjectile()
@@ -183,10 +198,65 @@ public class BOSSController : MonoBehaviour
         {
             GameObject magic = Instantiate(unknowMagic, transform.position, Quaternion.identity);
 
+            StopSpawning();
+
             if (audioManager)
             {
                 audioManager.StopMusicSoftly(5f);
             }
         }
     }
+
+    public void StartSpawning()
+    {
+        if (!isSpawning)
+        {
+            isSpawning = true;
+            StartCoroutine(SpawnBoss());
+        }
+    }
+
+    public void StopSpawning()
+    {
+        isSpawning = false;
+        StopCoroutine(SpawnBoss());
+    }
+
+    IEnumerator SpawnBoss()
+    {
+        while (isSpawning)
+        {
+            foreach (Transform leftSpawnPoint in leftSpawnPoints)
+            {
+                SpawnBossAtPoint(leftSpawnPoint);
+            }
+
+            foreach (Transform rightSpawnPoint in rightSpawnPoints)
+            {
+                SpawnBossAtPoint(rightSpawnPoint);
+            }
+
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+
+    void SpawnBossAtPoint(Transform spawnPoint)
+    {
+        GameObject newSkull = Instantiate(skullPrefab, spawnPoint.position, Quaternion.identity);
+
+        if (spawnPoint.position.x > 50.0f)
+        {
+            newSkull.transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
+        // Kích hoạt di chuyển của fireball nếu có
+        FireballMovement fireballMovement = newSkull.GetComponent<FireballMovement>();
+        if (fireballMovement != null)
+        {
+            Vector2 direction = (spawnPoint.position.x > 50.0f) ? Vector2.left : Vector2.right;
+
+            fireballMovement.Initialize(direction);
+        }
+    }
+
 }
