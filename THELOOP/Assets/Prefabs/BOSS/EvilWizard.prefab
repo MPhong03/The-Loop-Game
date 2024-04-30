@@ -394,8 +394,8 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 1000
-  _health: 1000
+  _maxHealth: 1500
+  _health: 1500
   _isAlive: 1
   isInvincible: 0
   invincibleTime: 0.05
@@ -419,7 +419,7 @@ MonoBehaviour:
   unknowMagic: {fileID: 5954149846278886536, guid: 988ff058477eeab4392f3d5bdeae8555, type: 3}
   walkSpeed: 4
   walkStopRate: 0.05
-  activeSpawnHP: 500
+  activeSpawnHP: 750
   skullPrefab: {fileID: 7245090107804516985, guid: 86b03ff0770ffdb49adb2b91e2846258, type: 3}
   leftSpawnPoints: []
   rightSpawnPoints: []
