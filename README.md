@@ -30,10 +30,6 @@ py -m http.server [port]
 
 ## Tài nguyên
 
-Link video demo: https://youtu.be/ovlOeo5d2Bo
-
-Hoặc
-
-[Nhấn vào đây](https://youtu.be/ovlOeo5d2Bo)
+Link video demo: [Nhấn vào đây](https://youtu.be/ovlOeo5d2Bo)
 
 ## [TRY OUR GAME](https://mphong03.github.io/theloop.github.io/)
